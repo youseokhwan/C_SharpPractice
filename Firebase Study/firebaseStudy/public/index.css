@@ -1,0 +1,43 @@
+<!-- 여기부터-->
+#container_input {
+    margin-top: 30px;
+}
+
+#container_card .card {
+    display: inline-block;
+}
+
+h3 {
+    margin-top: 70px;
+}
+
+input {
+    box-shadow:none !important;
+    border:1px solid #ccc !important;
+}
+
+.img-user {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.auth-btn {
+    margin-top: 70px;
+    float: right;
+}
+
+.g-signin2 {
+    margin-bottom: 10px;
+}
+
+#container_card {
+    margin-top: 10px;
+}
+
+#title {
+    float: left;
+}
+<!-- 여기까지 -->

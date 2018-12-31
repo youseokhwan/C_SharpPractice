@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Simple Chat</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="Personal Key" // Key
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css" />
+    
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="Personal Key"> // Key
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    
+</head>
+
+<body>
+    <div class="container">
+        <h3 id="title">Chat</h3>
+        
+        <div class="g-signin2 auth-btn" id="btn_signin" data-onsuccess="onSignIn"></div>
+        <a href="#" onclick="onSignOut();" class="auth-btn" id="btn_signout" hidden>Sign out</a>
+
+        
+        <div class="input-group mb-3" id="container_input" hidden>
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">></span>
+            </div>
+            <input type="text" class="form-control" id="input_text" placeholder="메시지를 입력하세요." aria-label="input"
+                aria-describedby="basic-addon1">
+        </div>
+
+        <div id="container_card"></div>
+    </div>
+</body>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "Personal Key", // Key
+    authDomain: "Personal Domain",
+    databaseURL: "Personal Domain",
+    projectId: "fir-studypractice",
+    storageBucket: "Personal Domain",
+    messagingSenderId: "186419471429"
+  };
+  firebase.initializeApp(config);
+    
+  /**
+    * #3 Google Auth
+    * Login
+    */
+    function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        userId = profile.getGivenName();
+        userImg = profile.getImageUrl();
+
+        $('#container_input').removeAttr("hidden");
+        $('#btn_signout').removeAttr("hidden")
+        $('#btn_signin').attr("hidden", true);
+
+        $("#title").text(profile.getGivenName() + "님");
+    };
+
+    /**
+    * #3 Google Auth
+    * Logout
+    */
+    function onSignOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            userId = "";
+
+            $('#container_input').attr("hidden", true);
+            $('#btn_signin').removeAttr("hidden");
+            $('#btn_signout').attr("hidden", true);
+
+            $("#title").text("Chat");
+        });
+    }
+
+</script>
+    
+<script>
+    $(function() {
+         connectWithDB();
+    })
+    
+    /**
+    * #1 Web
+    * Key Event
+    */
+    var userId = "";
+    var userImg = "";
+    let inputText = $("#input_text");
+    let containerCards = $("#container_card");
+
+    $(window).keypress(function (e) {
+        if (e.which == 13 && inputText.val().length != 0) {
+             addMemoToDB(inputText.val());
+            
+            inputText.val("");
+        }
+    })
+
+    /**
+    * #1 Web
+    * Make card with card template.
+    */
+    function makeCard(userId, userImg, msg) {
+        return `<div class="card" style="width:100%; margin-right: 10px; margin-bottom: 5px; ">
+            <div class="card-body">
+                <img class="img-user" style="display: inline-block" src="` + userImg + `"/>
+                <span style="display: inline-block" class="card-text">` + userId + `: ` + msg + `</span>
+            </div>
+        </div>`;
+    }
+    
+   /**
+   * #4 DB: FireStore
+   * Set Firestore Configuration.
+   */
+    const firestore = firebase.firestore();
+    const settings = { timestampsInSnapshots: true };
+    firestore.settings(settings);
+
+    var db = firebase.firestore();
+
+    /**
+    * #4 DB: Firestore
+    * Add Memo to Firestore DB.
+    */
+    function addMemoToDB(msg) {
+        var numOfCard = $(".card").length;
+
+        db.collection("messages").add({
+            id: numOfCard,
+            text: msg,
+            userid: userId,
+            userimage: userImg
+        }).then(function (docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+    }
+
+    /**
+    * #4 DB: Firestore
+    * Connect With Firestore DB.
+    */
+    function connectWithDB() {
+        db.collection("messages").orderBy("id").onSnapshot(function (snapshot) {
+            snapshot.docChanges().forEach((change) => {
+                if (change.type == "added") {
+                    data = change.doc.data()
+                    containerCards.prepend(makeCard(data.userid, data.userimage, data.text))
+                }
+            })
+        })
+    }
+    
+</script>
+                           
+                                
+                                
+</html>
+
