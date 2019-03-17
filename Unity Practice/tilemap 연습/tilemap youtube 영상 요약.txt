@@ -1,0 +1,46 @@
+Tilemap
+
+1. 타일맵 기본
+
+Create -> 2D Object -> Tilemap으로 생성
+Grid와 Tilemap 오브젝트가 생기는데 Grid는 UI의 Canvas와 같은 역할
+
+Grid 오브젝트안에 여러 Tilemap을 생성할 수 있다 (1개는 Background, 1개는 Foreground 등 레이어를 구분)
+
+타일맵에 타일을 찍기 위해서 Tile Palette가 필요(Window -> 2D -> Tile Palette)
+타일 팔레트는 타일들을 모아놓은 컬렉션으로 이해
+
+타일 팔레트에서 원하는 타일(or타일묶음) 선택 후 Scene뷰에서 직접 클릭(or드래그)하면서 제작(3번째 Brush로 선택 후)
+
+-----------------------
+
+2. 팔레트 생성
+
+Shift키 누르면 지우개, []버튼으로 회전 가능
+
+-----------------------
+
+3. 충돌처리, 시네머신 2D
+
+Tilemap 오브젝트에 Tilemap Collider 2D 컴포넌트를 추가하여 충돌처리 가능
+// Tile들에 전부 Collider가 생성되므로 충돌하면 안되는 것들은 따로 레이어를 분류해야할듯?
+
++ 타일마다 Collider가 생성되므로 연산에 비효율적임
+-> Composite Collider 2D 컴포넌트를 추가한 후 Tilemap Collider 2D 컴포넌트의 Used By Composite 속성에 체크해주면 같은 타일들은 하나의 Collider만 사용하게 됨(통합됨)
+
+자연스러운 카메라 Work를 구현하기 위해 시네머신 사용
+// 시네머신 강의 따로 보기
+
+Cinemachine -> Create 2D Camera로 생성
+Follow 속성에 캐릭터 오브젝트 드래그
+- Lens -> Orthographic Size 조절
+- Game뷰에서 노란색 Focus 기준으로 하늘색/빨간색 선 드래그로 조절하여 미세 조정
+  1. 하늘색 선 조절하여 천천히 따라갈 범위 조정
+  2. 빨간색 선 조절하여 무조건 따라갈 범위 조정
+  3. 하늘색 x축 가운데 선 조절하여 화면의 어느 부분에 중심을 둘지 조정
+- Add Extension -> Confiner 추가하여 카메라 무브의 Max 범위 지정
+- Max범위를 감싸는 Polygon Collider를 추가하여 (+IsTrigger) Confiner의 Bounding Shape 2D 속성에 드래그
+
+-----------------------
+
+4. https://www.youtube.com/watch?v=EZgvwvPcimQ&list=PL412Ym60h6uunDV_SaHfBXzfMhBjOFTnj&index=4
