@@ -1,0 +1,17 @@
+# 신경망의 수학적 요소
+
+### MNIST
+* 딥러닝 계의 Hello World
+* 오래된 역사와 함께 많은 연구에 사용됨
+* NumPy 배열 형태로 Keras에 이미 내장됨
+* 6만 개의 train_image, train_label와 1만 개의 test_image, test_label로 구성
+
+### ㅁㄴㅇㄹ
+* 학습 전에 데이터를 네트워크에 맞는 크기로 바꾸고, 0과 1 사이로 스케일 조정
+* test set는 train set보다 정확도가 낮음 (과대적합(overfitting))
+
+### 텐서(tensor)
+* 데이터 저장을 위한 컨테이너
+* 스칼라(0D): 하나의 숫자
+* 벡터(1D): 배열
+* 
