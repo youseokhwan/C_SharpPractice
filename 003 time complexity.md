@@ -74,5 +74,15 @@ vector<int> factor(int n) {
 - 상수는 무시하고, 가장 큰 영향을 끼치는 요소인 반복문만 따짐
 - O는 읽을 땐 Order로 읽는다. O(N^2)은 [오더 엔 제곱]으로 읽는다.
 - O(1)은 constant-time 알고리즘이라고 부름 (상수 시간 알고리즘)
+~~~
+- 2^N * M = O(2^N * M)
+- 1/64 * N^2 * M = O(N^2 * M)
+- N^2 * M + NlogM + N * M^2 = O(N^2 * M + N * M^2)
+- 42 = O(1)
+~~~
 
-### 114p
+### P, NP
+
+- P(polynomial) : 다항 시간 안에 풀 수 있는 문제
+- NP(non-polynomial) : 답이 주어졌을 때 이것이 다항 시간안에 정답인지 확인할 수 있는 문제
+- NP-Hard, NP-Complete 등...
