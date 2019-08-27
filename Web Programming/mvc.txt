@@ -1,0 +1,27 @@
+https://www.youtube.com/watch?v=hJhIV6wky8g
+Youtube-프리렉 : MVC 패턴, DTO, DAO 패턴
+
+MVC(Model + View + Controller)
+DTO(Data Transfer Object)
+DAO(Data Access Object)
+
+MVC 패턴 : 애플리케이션을 크게 Model, View, Controller의 세 영역으로 구분하고 영역 간의 결합도를 최소화 한 패턴
+- 서로 관여하지 않되, 연결고리 필요
+
+1) Model
+- 프로그램의 직접적인 작업을 하는 것이 아닌 데이터를 저장하거나 보내는 작업(DB)을 하는 객체
+- View에서 요청한 질의에 대한 응답을 담당
+- Controller의 요청에 따라 Model 상태를 변화시키고 그 변화를 View에 전달
+- DTO를 통해 View와 Controller와 값을 주고받으며, DB와는 DAO를 사용해 통신
+
+2) View
+- 실제 사용자에게 보여지는 부분
+- 바뀐 Model의 상태를 업데이트
+- View의 행위를 Controller에 전달
+
+3) Controller
+- View에 대한 하나의 진입점
+- 어플리케이션의 행위를 정의해 둔 부분
+- 특정 결과에 대한 View를 선택하여 응답하는 역할
+
+예시) View에서 사용자가 값을 입력하면 DTO를 통해 Controller에게 전달하고, 그 내용을 Model에게 전달 -> 결과는 다시 Controller를 거쳐 View로 전달
