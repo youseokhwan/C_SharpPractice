@@ -33,7 +33,7 @@
 
 ## 🔑 license & copyright
 
-## :clipboard: Connect&Bug Report
+## :clipboard: Connect & Bug Report
 
 - Github : https://github.com/hoonkk
 - Email : byul2sol@naver.com       
