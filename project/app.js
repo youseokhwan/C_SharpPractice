@@ -61,7 +61,13 @@ app.post("/webhook", (req, res) => {
 function receivedMessage(event) {
 	var senderId = event.sender.id;
 	var content = event.message.text;
-	var bot_message = "bot : " + content;
+	
+	if(content == 'good') {
+		var bot_message = '좋아';
+	}
+	else
+		var bot_message = content + '에 해당하는 정보가 없습니다.';
+	
 	sendTextMessage(senderId, bot_message);
 }
 
