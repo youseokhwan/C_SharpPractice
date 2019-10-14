@@ -1,0 +1,47 @@
+1. ES2015+
+- ES6부터 많은 변화로 인해 공부할 필요성이 있음
+
+2. const, let
+- var는 사용하지 않음
+- const와 let은 함수 스코프가 아닌 블록 스코프를 사용함으로써 호이스팅 문제 해결 및 코드 관리가 더 수월
+
+3. 템플릿 문자열
+- `를 이용하여 문자열 안에 변수를 집어넣을 수 있음
+- const str = `${num1} 더하기 ${num2}는 '${result}'`;
+
+4. 객체 리터럴
+// 내용 추가
+
+5. 화살표 함수
+~~~
+const add = (x, y) => {
+  return x+y;
+};
+
+const add2 = (x, y) => x+y;
+
+const not = x => !x;
+~~~
+
+6. 비구조화 할당
+~~~
+const candyMachine = {
+  status: {
+    name: 'node',
+    count: 5,
+  },
+  getCandy() {
+    this.status.count--;
+    return this.status.count;
+  }
+};
+const { getCandy, status: { count } } = candyMachine;
+~~~
+- 배열도 비구조화 가능
+~~~
+const array = ['nodejs', {}, 10, true];
+const [node, obj, , bool] = array;
+~~~
+
+7. 프로미스
+// 내용 추가
