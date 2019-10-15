@@ -44,4 +44,75 @@ const [node, obj, , bool] = array;
 ~~~
 
 7. 프로미스
-// 내용 추가
+- ES2015부터는 노드의 API들이 콜백 대신 프로미스 기반으로 재구성
+~~~
+const condition = true;
+const promise = new Promise((resolve, reject) => {
+  if(condition)
+    resolve('성공');
+  else
+  	reject('실패');
+});
+
+promise.then((message) => {
+  console.log(message);
+}).catch((error) => {
+  console.error(error);
+});
+~~~
+
+8. async/await
+- 콜백 지옥을 해결한 프로미스를 더 깔끔하게 개선
+~~~
+async function findAndSaveUser(Users) {
+  try {
+    let user = await Users.findOne({});
+	user.name = 'zero';
+	user = await user.save();
+	user = await Users.findOne({ gender: 'm' });
+  } catch(error) {
+    console.error(error);
+  }
+}
+~~~
+
+9. AJAX
+- XML 혹은 JSON을 이용한 비동기적 웹 서비스
+- 페이지 이동 없이 서버에 요청을 보내고 응답을 받는 기술
+~~~
+var xhr = new XMLHttpRequest();
+xhr.onload = function() {
+  if(xhr.status === 200 || xhr.status === 201)
+    console.log(xhr.responseText);
+};
+xhr.onerror = function() {
+  console.error(xhr.responseText);
+};
+xhr.open('GET', 'URL');
+xhr.send();
+~~~
+- form 태그의 데이터를 전송할 때 FormData 사용
+- append: 추가, has: 존재 여부, get: 키에 해당하는 값 한개 가져옴
+  getAll: 모두 가져옴, delete: 삭제, set: 수정
+~~~
+var formData = new FormData();
+formData.append('name', 'zerocho');
+formData.append('item', 'orange');
+formData.has('item');
+formData.get('item');
+formData.set('item', 'apple');
+formData.delete('item');
+~~~
+
+10. data attribute, dataset
+- HTML5에 데이터를 저장하는 공식적인 방법?(보안과 관련없는 데이터)
+~~~
+<ul>
+  <li data-id="1" data-user-job="programmer">Zero</li>
+  <li data-id="2" data-user-job="designer">Nero</li>
+</ul>
+<script>
+  console.log(document.querySelector('li').dataset);
+  // { id: '1', userJob: 'programmer' }
+</script>
+~~~
