@@ -3,7 +3,7 @@ import time
 import sys
 sys.path.append('./keyboard/')
 import keyboard
-_red, _green, _blue, _blink, _modulation, _buzzer, _music = [False] * 8
+_red, _green, _blue, _blink, _modulation, _buzzer, _music = [False] * 7
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(16, GPIO.OUT)  # R
