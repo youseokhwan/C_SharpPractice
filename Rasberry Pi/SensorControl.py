@@ -1,9 +1,9 @@
 import RPi.GPIO as GPIO
 import time
 import sys
-sys.path.append('./keyboard/')
+sys.path.append('./../keyboard/')
 import keyboard
-_red, _green, _blue, _blink, _modulation, _buzzer, _music = [False] * 7
+_red, _green, _blue, _blink, _pir, _modulation, _buzzer, _music = [False] * 8
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(16, GPIO.OUT)  # R
@@ -49,6 +49,12 @@ def toggle_blue():
 
     _blue = not _blue  # toggle _blue
     print('BLUE:', not _blue, '->', _blue)
+
+
+def toggle_pir():
+    global _pir
+    _pir = not _pir
+    print('PIR:', not _pir, '->', _pir)
 
 
 def toggle_blink():
@@ -116,28 +122,34 @@ def all_off():
     _modulation = False
     _buzzer = False
     _music = False
+    print('all_off() 호출')
 
 
 keyboard.add_hotkey('r', toggle_red)  # R 입력
 keyboard.add_hotkey('g', toggle_green)  # G 입력
 keyboard.add_hotkey('b', toggle_blue)  # B 입력
-keyboard.add_hotkey('m', toggle_modulation())  # M 입력
+keyboard.add_hotkey('m', toggle_modulation)  # M 입력
 keyboard.add_hotkey('x', toggle_blink)  # X 입력
 keyboard.add_hotkey('s', toggle_music)  # S 입력
 keyboard.add_hotkey('o', all_off)  # O 입력
 
-
-while True:  # 메인 루프
-    try:
+try:
+    while True:  # 메인 루프
         # PIR 감지
         if GPIO.input(24):  # 움직임을 감지했을 때
+            toggle_pir()
             if _red:  # if RED on then Blink
                 toggle_blink()
             else:  # RED on
                 toggle_red()
+        elif not GPIO.input(24) and _pir:
+            toggle_pir()
+            if _blink:
+                toggle_blink()
 
         # M 입력
         if _modulation:
+            print('modulation이 실행됨')
             if _green:
                 toggle_green()
             if _blue:
@@ -154,6 +166,7 @@ while True:  # 메인 루프
 
         # Blink 구현
         if _blink:
+            print('blink가 실행됨')
             if _red:
                 GPIO.output(16, False)
             if _green:
@@ -170,6 +183,7 @@ while True:  # 메인 루프
 
         # Button 구현
         if not GPIO.input(12):  # 버튼이 눌렸을 때
+            print('버튼이 눌림')
             if _buzzer:  # if Buzzer on then All Off
                 all_off()
             else:  # Buzzer on
@@ -177,10 +191,12 @@ while True:  # 메인 루프
 
         # Buzzer 구현
         if _buzzer:
+            print('버저를 재생')
             buzz()
 
         # Music 구현
         if _music:
+            print('음악을 재생')
             # GPIO.setup(25, GPIO.OUT)
             x = 0
             pit = [262, 330, 392, 523, 1047]
@@ -194,6 +210,9 @@ while True:  # 메인 루프
 
         time.sleep(0.5)  # 버튼 입력 및 센서 감지 딜레이
 
-    except KeyboardInterrupt:
-        print('keyboard interrupt!')
-        GPIO.cleanup()
+except KeyboardInterrupt:
+    print('keyboard interrupt!')
+    GPIO.cleanup()
+finally:
+    GPIO.cleanup()
+
