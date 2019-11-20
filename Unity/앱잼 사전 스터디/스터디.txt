@@ -1,0 +1,168 @@
+[앱잼 사전 스터디]
+시간/장소: 19.11.20(수) 18:00 ~ / 복정역 카페코이노리
+
+석환 topic: 틸트, 충돌판정, 프리팹, 제너레이터, (+ 카메라 제어, - 데이터저장)
+경훈 topic: 씬전환, 사운드, 캐릭터 및 화면 이동
+
+1. Unity 설치(2019.2.0f1)
+  - 안드로이드와 iOS 추가 설치 체크
+  - 각각 안드로이드 스튜디오, Xcode 설치해야 할 수도 있음
+
+2. vscode 연동
+
+3. GitHub 레포지토리 만들기 "unity-practice"
+
+4. Unity 프로젝트 생성
+  1) 2D 선택
+  2) 프로젝트 이름: unity-practice
+  3) 저장 위치는 본인이 편한 곳
+
+5. 생성되면 github에 올리기(clone, add, commit, push)
+
+6. 메인 화면 설명
+  1) 조작 도구(QWER 가능)
+    (1) 돋보기(Q): 화면 이동 가능, 개체 선택 불가능
+    (2) 화살표(W): 개체 선택 가능, 화면 이동 불가능
+    (3) 회전(E) : 회전 시킬 수 있음
+    (4) 기타 ...
+  2) 하이어라키 : 씬(화면)에 배치된 오브젝트들을 목록으로 보여줌
+  3) Scene 뷰, Game 뷰 : 각각 편집과 실제 플레이 화면을 볼 수 있음
+  4) 프로젝트 뷰 : 게임 제작에 필요한 에셋들을 관리하는 곳
+    - 이미지 파일, 사운드 파일, 스크립트 파일(.cs)
+    - 각 뷰에서 뷰로 드래그앤드롭이 잘 돼있음
+  5) 인스펙터 창 : 각 오브젝트의 상세 정보를 열람하거나 편집할 수 있음
+
+7. 정육면체 하나 추가하고 위치, 크기, 각도 변경 해보기
+
+8. 기즈모 변경 (숫자 2)
+  - 기즈모 잠가놓기..
+
+9. Game 뷰에서 Aspect 설정
+  - 갤럭시 S8 기준 1440x2560 정도 놓고?
+  - 오리엔테이션 : portrait, landscape
+
+10. 기초 스크립트 작성해보기
+  1) car.png를 프로젝트 뷰로 드래그앤드롭
+  2) Inspecter 창에서 크기를 적당하게 조절
+  3) 게임 실행 -> 당연히 아무 일도 일어나지 않음
+  4) 스크립트를 통해 이 차를 제어 해보자
+  5) 프로젝트 뷰에서 우클릭하고 CarController 생성
+  6) 우클릭하고 Open C# Project로 vscode 열고 자동완성 잘 되는지 확인
+  7) 코드의 기본적인 using, start(), update() 설명
+
+11. 자동차 제어하기
+  1) update에 this.transform.Translate(0.05f, 0, 0); 추가
+  2) 실행 -> 안 움직임
+  3) 스크립트를 오브젝트에 적용시켜야 함
+  4) 적용시키고 실행
+  + update문이 1초에 수십번 이상 실행되기 때문에 작은 float 단위쓰는 것 습관화
+
+12. Rigidbody2D
+  1) 물리학적 계산을 쉽게 할 수 있도록 도와주는 모듈
+  2) Car 선택 후 Rigidbody 2D 추가(반드시 2D)
+  3) Body Type
+    (1) Dynamic : 모든 물리학 적용(중력가속도, 마찰력, 무게 등)
+    (2) Kinematic : 제한된 적용(중력과 힘 X) -> 스크립트로 제어 가능
+    (3) Static : 모든 물리학 X, 움직이지 않음 -> 벽, 고정된 장애물 등 충돌판정은 가능
+  4) Car에 Rigidbody2D를 추가 / 땅 2개 추가
+    - 실행 -> 차가 땅을 관통함
+    - Rigidbody는 Rigidbody가 설정된 오브젝트끼리만 판정
+  6) ground 2개에 Rigidbody 적용
+    - 실행 -> 땅도 같이 낙하
+    - Body Type을 Kinematic 혹은 Static으로 적용 하고 실행 -> 역시 관통
+
+13. Collider2D
+  1) 자동차에 Box Collider 2D를 추가하고 판정 영역 편집
+  2) 발판 2개에 Box Collider 2D를 각각 추가
+  3) 실행 -> 이제 잘 됨
+  4) 이동 구문 주석 해제하고 실행 -> 이제 좀 봐줄만함
+
+14. 화면 밖으로 넘어가면 파괴하기
+  1) if(this.transform.position.y < -0.7f)
+      Destroy(gameObject);
+
+15. 카메라 제어하기
+  1) 땅 넓히고 실행 -> 차는 잘 가는데 카메라가 안따라감
+  2) CameraController.cs 만들기
+  3) Update()에
+      this.transform.position = new Vector3(car.transform.position.x, this.transform.position.y, this.transform.position.z);
+  4) 위에 public GameObject car; 하고 드래그앤드롭으로 넣기
+  5) car.transform.position.x + 5.5f 넣기
+
+16. 프리팹
+  - 설계도에 비유 가능
+  - 수십 km를 미리 만들어놓을 수는 없음, 코드로 작성해야 함
+
+17. 기름통 만들기(일단 따라해보기!)
+  - oil.png를 씬 뷰에 넣고 크기 조정하기
+  - Rigidbody 2D(Dynamic), Collider 2D 추가
+  - OilController.cs 에 추가
+    void OnCollisionEnter2D(Collision2D col) {
+      if(col.gameObject.tag == "Player") {
+          Debug.Log("충돌함");
+          Destroy(gameObject);
+      }
+    }
+  - 실행해서 잘 되는지 테스트
+
+18. 랜덤한 위치에서 생성되게 하기
+void Start()
+{
+    int x = Random.Range(6, 61);
+    this.transform.position = new Vector3(x, 5.0f, 0);
+}
+
+19. 프리팹 만들기
+  1) Prefabs 폴더 생성
+  2) 하이어라키에 있는 oil을 폴더로 드래그
+  3) 파일명 oilPrefab으로 바꾸고 씬 뷰에 있는 oil은 지우기
+  4) OilGenerator.cs 만들고, GameManager 오브젝트 만들어서 연결하기
+
+20. OilGenerator.cs
+~~~
+public GameObject oilPrefab;
+float span = 2.0f;
+float delta = 0;
+
+void Update()
+{
+    this.delta += Time.deltaTime;
+    if(this.delta > this.span) {
+        this.delta = 0;
+        GameObject go = Instantiate(oilPrefab) as GameObject;
+    }
+}
+~~~
+  - oilPrefab 드래그로 연결
+  - 실행 후 2초마다 기름통 만들어지는지 확인
+
+21. 안드로이드빌드 틸트 !!
+- landscape only
+- 안드로이드로 빌드 바꾸기
+- CarController
+~~~
+public speed = 10.0f;
+
+void Update() {
+    // this.transform.Translate(0.1f, 0, 0);
+
+    Vector3 dir = Vector3.zero;
+    dir.x = Input.acceleration.x;
+
+    Vector3 scale = transform.localScale;
+    if(dir.x < 0) {
+        scale.x = -Mathf.Abs(scale.x);
+        transform.localScale = scale;
+    }
+    else {
+        scale.x = Mathf.Abs(scale.x);
+        transform.localScale = scale;
+    }
+    transform.Translate(dir * speed * Time.deltaTime);
+    
+    // 화면 밖으로 넘어가면 파괴
+    if(this.transform.position.y < -7.0f) {
+        Destroy(gameObject);
+    }
+}
+~~~
