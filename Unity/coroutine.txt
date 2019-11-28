@@ -1,0 +1,20 @@
+Coroutine: 진입점이 여러 개인 함수
+유니티는 Thread-Safety를 지원하지 않기 때문에 코루틴을 비동기 처리에 애용한다.
+
+~~~
+void Start()
+{
+    StartCoroutine(SomeCoroutine());
+}
+
+IEnumerator SomeCoroutine()
+{
+    Debug.Log("Start Coroutine");  // StartCoroutine() 직후 실행
+    yield return new WaitForSeconds(1f);
+    Debug.Log("Waited!");  // 1초 후 실행
+    yield return null;
+    Debug.Log("End Coroutine!");  // 1프레임 후 실행
+}
+~~~
+
+yield break;를 통해서도 코루틴을 종료할 수 있다.
