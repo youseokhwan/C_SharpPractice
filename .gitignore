@@ -1150,3 +1150,33 @@ obj/
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 
 # End of https://www.gitignore.io/api/c,c++,java,cuda,linux,macos,unity,python,csharp,windows,android,pycharm,java-web,firebase,dotnetcore,visualstudio,androidstudio,visualstudiocode,jupyternotebooks
+
+
+# Created by https://www.gitignore.io/api/vue,vuejs
+# Edit at https://www.gitignore.io/?templates=vue,vuejs
+
+### Vue ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_componets
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+### Vuejs ###
+# Recommended template: Node.gitignore
+
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# End of https://www.gitignore.io/api/vue,vuejs
