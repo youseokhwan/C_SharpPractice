@@ -5,7 +5,7 @@
 ## 😎 member
 
 - [youseokhwan](https://github.com/youseokhwan)
-- [Member]()
+- [other member]()
 
 ## 💻 development environment
 
