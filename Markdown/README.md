@@ -2,13 +2,14 @@
 
 프로젝트에 대한 설명 및 스크린샷 등
 
-## 😎 author
+## 😎 member
 
-[youseokhwan](https://github.com/youseokhwan)
+- [youseokhwan](https://github.com/youseokhwan)
+- [Member]()
 
 ## 💻 development environment
 
-- MacBook Pro 2017(Mojave 10.14.5) / 사용한 IDE
+- MacBook Pro 2017(Catalina 10.15.2) / 사용한 IDE
 
 ## 🔨 hardware requirements
 
