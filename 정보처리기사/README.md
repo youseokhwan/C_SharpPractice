@@ -13,8 +13,8 @@
 
 ## 공부
 
-- [필기 정리]()
-- [실기 정리]()
+- [필기 정리](https://github.com/youseokhwan/today-i-learned/blob/master/정보처리기사/필기/개요.md)
+- [실기 정리](https://github.com/youseokhwan/today-i-learned/blob/master/정보처리기사/실기/개요.md)
 > 모르는 내용이나 정리할 필요가 있다고 생각되는 부분만 정리하고
 > 알고있는 내용이나 암기가 무의미한 부분은 생략
 
