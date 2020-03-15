@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+/* Dark Theme */
+/* 출처: https://shoveller.tistory.com/86 */
+
+/* @media (prefers-color-scheme: dark) { */
+    .area_head,
+    input,
+    body,
+    .area_menu,
+    .area_menu .list_cate {
+        background: #111;
+        color: #686868;
+    }
+    body,
+    button,
+    input,
+    select,
+    table,
+    textarea {
+        color: #bbb;
+    }
+    #header {
+        border-bottom: 1px solid #222;
+    }
+    .area_menu {
+        border-right: 1px solid #222;
+    }
+    .sidebar {
+        border-top: 1px solid #222;
+    }
+    a {
+        color: #999;
+    }
+    .index_type_common .btn_more {
+        color: #111;
+    }
+    .reply_write .btn_register {
+        color: #111;
+    }
+    .link_article:hover .txt_post {
+        color: #eee;
+    }
+    .article_content .thumbnail_post:hover {
+        opacity: 1.0;
+        filter: brightness(110%);
+    }
+    .article_content .link_article:hover .thumbnail_post {
+        opacity: 1.0;
+        filter: brightness(110%);
+    }
+    .index_type_common .btn_post_more {
+        border: 1px solid #262626;
+    }
+    .thema_orange .btn_post_more:hover {
+        color: #111;
+    }
+    .inner_header .btn_menu,
+    .inner_header .btn_search {
+        color: #eee;
+    }
+    .article_content .link_title {
+        color: #eee;
+    }
+    .box_sidebar .title_sidebar {
+        color: #eee;
+    }
+    .box_sidebar .text_about {
+        color: #aaa;
+    }
+    .area_menu .list_gnb .list_lnb {
+        border-left: 3px solid #282828;
+    }
+    .article_view ul li {
+        color: rgba(255, 255, 255, 0.87);
+    }
+    .article_view pre {
+        background: rgba(0, 0, 0, 0.35);
+        /* color: rgba(34, 85, 51, 0.87); */
+    }
+    .container_postbtn {
+        border-bottom: 1px solid #222;
+    }
+    .area_reply .box_reply_info {
+        border-bottom: 1px solid #222;
+    }
+    textarea {
+        background-color: #111;
+    }
+    .area_paging .link_page {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .area_paging .link_prev.no-more-prev,
+    .area_paging .link_next.no-more-next {
+        color: rgba(255, 255, 255, 0.15);
+    }
+    .area_paging .selected {
+        background: #222;
+    }
+    .area_paging .link_num:hover span {
+        background: #222;
+    }
+    .area_view_content .area_tag {
+        border-bottom: 1px solid #222;
+    }
+    .inner_header .area_search {
+        background: #111;
+    }
+/* } */
