@@ -2467,13 +2467,31 @@ html, body {
 
 /* 검색창 */
 .inp_search {
-	border-bottom: 2px solid #000;
+	border-bottom: 2px solid #2F9D27;
 	padding-left: 3px;
 }
 
 /* 타이틀 폰트 색상 검은색으로 변경 */
 .title_text {
 	color: #000;
+}
+
+/* Read More 버튼 색상 변경 */
+.thema_black button.thema_apply {
+		background: #2F9D27;
+}
+
+/* Read More 버튼 색상 변경(hover) */
+/*
+.thema_black button.thema_apply:hover {
+		background: #47C83E;
+}
+*/
+
+/* 카테고리 문구 색상 변경 */
+.category {
+	color: #2F9D27;
+	font-weight: bold
 }
 
 /* ================================== */
