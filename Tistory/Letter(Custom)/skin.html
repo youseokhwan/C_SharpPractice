@@ -3,8 +3,8 @@
 
 <head>
     <!-- <title>[##_page_title_##] :: [##_title_##]</title> -->
-    <!-- <meta name="title" content="[##_page_title_##] :: [##_title_##]" /> -->
     <title>[##_title_##]</title>
+    <!-- <meta name="title" content="[##_page_title_##] :: [##_title_##]" /> -->
     <meta name="title" content="[##_title_##]" />
     <meta name="description" Content="[##_desc_##]" />
     <meta charset="utf-8" />
@@ -16,12 +16,15 @@
 
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./images/style_webicon.css" />
-    <!-- <link rel="stylesheet" href="./images/custom.css" /> -->
 	
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="./images/common.js"></script>
+
+    <!-- 메뉴바 GitHub, Gmail 아이콘 -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body id="[##_body_id_##]" class="[##_var_penelopeColorSet_##]">
@@ -47,16 +50,16 @@
                     <!-- // related_type_view -->
 
                     <!-- about_me -->
-                    <div class="about_me_mobile">
+                    <!-- <div class="about_me_mobile">
                         <div class="box_sidebar about_me">
                             <h3 class="title_sidebar">ABOUT ME</h3>
                             <p class="text_about">-</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <ul class="list_sns">
-                    <s_if_var_snsFacebook>
+                    <!-- <s_if_var_snsFacebook>
                         <li><a href="[##_var_snsFacebook_##]" class="link_sns link_fb" target="_blank"><span class="blind">페이스북</span></a></li>
                     </s_if_var_snsFacebook>
                     <s_if_var_snsTwitter>
@@ -64,9 +67,9 @@
                     </s_if_var_snsTwitter>
                     <s_if_var_snsInstagram>
                         <li><a href="[##_var_snsInstagram_##]" class="link_sns link_insta" target="_blank"><span class="blind">인스타그램</span></a></li>
-                    </s_if_var_snsInstagram>
-									<li><a href="https://github.com/youseokhwan"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a></li>
-									<li><a href="mailto:youseokhwan15@gmail.com" target="_blank"><i class="fa fa-google fa-3x" aria-hidden="true"></i></a></li>
+                    </s_if_var_snsInstagram> -->
+                    <li><a href="https://github.com/youseokhwan"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a></li>
+                    <li><a href="mailto:youseokhwan15@gmail.com" target="_blank"><i class="fa fa-google fa-3x" aria-hidden="true"></i></a></li>
                 </ul>
 
                 <div class="box_visit">
@@ -92,14 +95,14 @@
             <div id="container">
                 <header id="header">
                     <div class="inner_header">
-                        <h1 class="logo">
+                        <h3 class="logo">
                             <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo" <s_if_var_logoImage>style="background-image:url('[##_var_logoImage_##]')"</s_if_var_logoImage>>
                                 <span class="blind">[##_title_##]</span>
                                 <s_not_var_logoImage>
                                     <span class="title_text">[##_title_##]</span>
                                 </s_not_var_logoImage>
                             </a>
-                        </h1>
+                        </h3>
                         <button type="button" class="btn_menu"><span class="icon-Menu"></span><span class="icon-Close"></span><span class="blind">메뉴</span></button>
                         <button class="btn_search"><span class="icon-Search"></span><span class="blind">검색</span></button>
 
@@ -142,7 +145,7 @@
 
                                                         <a href="[##_cover_item_url_##]" class="link_article">
                                                             <div class="content_post">
-                                                                <p class="txt_post">
+                                                                <p class="txt_post text-secondary">
                                                                     [##_cover_item_summary_##]
                                                                 </p>
                                                             </div>
@@ -179,12 +182,12 @@
                                                         <div class="thumbnail_zone">
                                                             <span class="thumbnail_post" <s_cover_item_thumbnail>style="background-image:url('[##_cover_item_thumbnail_##]')"</s_cover_item_thumbnail>>
                                                         </div>
-                                                        <p class="txt_post">
+                                                        <p class="txt_post text-secondary">
                                                             [##_cover_item_summary_##]
                                                         </p>
                                                     </div>
-                                                    <button type="button" class="btn_more thema_apply mobile_blind">Read
-                                                        More</button>
+                                                    <!-- <button type="button" class="btn_more thema_apply mobile_blind">Read More</button> -->
+                                                    <button type="button" class="btn btn-outline-success shadow-none btn_readmore">Read More</button>
                                                 </a>
                                             </div>
                                         </s_cover_item>
@@ -220,12 +223,12 @@
                                                             </s_cover_item_thumbnail>
                                                         </div>
 
-                                                        <p class="txt_post">
+                                                        <p class="txt_post text-secondary">
                                                             [##_cover_item_summary_##]
                                                         </p>
                                                     </div>
-                                                    <button type="button" class="btn_more thema_apply mobile_blind">Read
-                                                        More</button>
+                                                    <!-- <button type="button" class="btn_more thema_apply mobile_blind">Read More</button> -->
+                                                    <button type="button" class="btn btn-outline-success shadow-none btn_readmore">Read More</button>
                                                 </a>
                                             </div>
                                         </s_cover_item>
@@ -259,11 +262,12 @@
                                                                 </div>
                                                             </s_cover_item_article_info>
                                                             <a href="[##_cover_item_url_##]" class="link_article">
-                                                                <p class="txt_post">
+                                                                <p class="txt_post text-secondary">
                                                                     [##_cover_item_summary_##]
                                                                 </p>
-                                                                <button type="button" class="btn_more thema_apply mobile_blind">Read
-                                                                    More</button>
+                                                                <!-- <button type="button" class="btn_more thema_apply mobile_blind">Read
+                                                                    More</button> -->
+                                                                <button type="button" class="btn btn-outline-success shadow-none btn_readmore">Read More</button>
                                                             </a>
                                                         </div>
                                                     </div>
@@ -325,10 +329,11 @@
                                                     </div>
 
                                                     <a href="[##_article_rep_link_##]" class="link_article">
-                                                        <p class="txt_post">
+                                                        <p class="txt_post text-secondary">
                                                             [##_article_rep_summary_##]
                                                         </p>
-                                                        <button type="button" class="btn_more thema_apply mobile_blind">Read More</button>
+                                                        <!-- <button type="button" class="btn_more thema_apply mobile_blind">Read More</button> -->
+                                                        <button type="button" class="btn btn-outline-success shadow-none btn_readmore">Read More</button>
                                                     </a>
                                                 </div>
                                             </div>
@@ -378,7 +383,7 @@
 
                                                     <s_article_related>
                                                         <!-- related_type_view -->
-                                                        <div class="related_type related_type_view">
+                                                        <!-- <div class="related_type related_type_view">
                                                             <h2 class="title_related">관련글 <a href="[##_article_rep_category_link_##]"
                                                                     class="link_add thema_apply">관련글 더보기</a></h2>
                                                             <ul class="list_related">
@@ -392,18 +397,19 @@
                                                                     </li>
                                                                 </s_article_related_rep>
                                                             </ul>
-                                                        </div>
+                                                        </div> -->
                                                         <!-- // related_type_view -->
                                                     </s_article_related>
 
                                                     <!-- area_comment -->
                                                     <div class="area_reply">
                                                         <div class="box_reply_info">
-                                                            <a href="#rp" onclick="[##_article_rep_rp_link_##]" class="reply_events">
+                                                            <!-- <a href="#rp" onclick="[##_article_rep_rp_link_##]" class="reply_events"> -->
                                                             <p class="item_info">댓글 <span class="thema_apply">
                                                                     <s_rp_count>[##_article_rep_rp_cnt_##]</s_rp_count>
-                                                                </span></p>
-                                                            </a>
+                                                                </span>
+                                                            </p>
+                                                            <!-- </a> -->
                                                             <button type="button" class="btn_fold"><span class="blind">댓글
                                                                     접기</span></button>
                                                             <button type="button" class="btn_spread" style="display: none;"><span
@@ -501,7 +507,11 @@
                                                                             </s_rp_member>
 
                                                                             <div class="form_reg">
-                                                                                <button type="button" class="btn_register thema_apply"
+                                                                                <!-- <button type="button" class="btn_register thema_apply"
+                                                                                    onclick="[##_rp_onclick_submit_##]">등록</button> -->
+                                                                                <!-- <button type="button" class="btn_register thema_apply btn btn-outline-success shadow-none"
+                                                                                    onclick="[##_rp_onclick_submit_##]">등록</button> -->
+                                                                                <button style="float: right;" type="button" class="btn btn-outline-success shadow-none"
                                                                                     onclick="[##_rp_onclick_submit_##]">등록</button>
                                                                             </div>
                                                                         </div>
@@ -541,11 +551,11 @@
                                                     </div>
 
                                                     <a href="[##_article_rep_link_##]" class="link_article">
-                                                        <p class="txt_post">
+                                                        <p class="txt_post text-secondary">
                                                             보호되어 있는 글입니다.
                                                         </p>
-                                                        <button type="button" class="btn_more thema_apply mobile_blind">Read
-                                                            More</button>
+                                                        <!-- <button type="button" class="btn_more thema_apply mobile_blind">Read More</button> -->
+                                                        <button type="button" class="btn btn-outline-success shadow-none btn_readmore">Read More</button>
                                                     </a>
                                                 </div>
                                             </div>
@@ -619,11 +629,11 @@
                                                     </div>
 
                                                     <a href="[##_notice_rep_link_##]" class="link_article">
-                                                        <p class="txt_post">
+                                                        <p class="txt_post text-secondary">
                                                             [##_notice_rep_summary_##]
                                                         </p>
-                                                        <button type="button" class="btn_more thema_apply mobile_blind">Read
-                                                            More</button>
+                                                        <!-- <button type="button" class="btn_more thema_apply mobile_blind">Read More</button> -->
+                                                        <button type="button" class="btn btn-outline-success shadow-none btn_readmore">Read More</button>
                                                     </a>
                                                 </div>
                                             </div>
@@ -879,6 +889,10 @@
         <!-- // wrap -->
     </s_t3>
 
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 <script>
     $('.article_content').find('table').each(function (idx, el) {

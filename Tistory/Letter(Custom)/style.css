@@ -955,7 +955,6 @@ html, body {
   .index_type_post .btn_area {
     padding: 0 20px;
   }
-
 }
 /* // main - index_type_post */
 
@@ -2459,6 +2458,11 @@ html, body {
 	margin-left: 10px;
 }
 
+/* GitHub, Gmail 아이콘(hover) */
+.fa-3x:hover {
+	color: #2F9D27;
+}
+
 /* Yesterday 없애고 Total 한줄로 표시 */
 .box_visit .data_total {
   float: left;
@@ -2476,22 +2480,127 @@ html, body {
 	color: #000;
 }
 
-/* Read More 버튼 색상 변경 */
-.thema_black button.thema_apply {
-		background: #2F9D27;
-}
-
-/* Read More 버튼 색상 변경(hover) */
-/*
-.thema_black button.thema_apply:hover {
-		background: #47C83E;
-}
-*/
-
 /* 카테고리 문구 색상 변경 */
 .category {
 	color: #2F9D27;
-	font-weight: bold
+	font-weight: bold;
+}
+
+/* underline 제거 */
+.link_logo:hover,
+.link_title:hover,
+.link_article:hover,
+.link_category:hover,
+.admin a:hover,
+.area_menu .list_gnb .link_gnb:hover {
+  text-decoration: none;
+}
+
+/* 메뉴바 폰트 색상 검은색으로 */
+.area_menu .list_gnb .link_gnb {
+  color: #000;
+}
+
+/* 메뉴바 폰트 색상 초록색으로(hover) */
+.area_menu .list_gnb .link_gnb:hover {
+  color: #28a745;
+}
+
+/* 검색창 X 아이콘 살짝 내리기 */
+.inner_header .area_search .btn_search_del {
+  top: 7px;
+}
+
+/* 포스팅 admin 메뉴 마진 */
+.area_view_content .admin {
+  margin-bottom: 10px;
+}
+
+/* 포스팅 admin 메뉴 폰트 색상 변경 */
+.admin a {
+  color: #6c757d;
+}
+
+/* 포스팅 admin 메뉴 폰트 색상 변경(hover) */
+.admin a:hover {
+  color: #28a745;
+}
+
+/* 태그 키워드 hover 설정 */
+.area_view_content .area_tag .tag_content a:hover {
+  text-decoration: none;
+  color: #28a745;
+}
+
+/* 댓글 타이틀 색상 변경 */
+.area_reply .box_reply_info .item_info {
+  color: black;
+}
+
+/* 댓글 아이디 hover 설정 */
+.comment-list ul li .author-meta a:hover {
+  color: #28a745;
+}
+
+/* 댓글 관련 메뉴(댓글주소, 수정/삭제, 댓글쓰기)*/
+.comment-list ul li .control a {
+  color: black;
+}
+
+/* 댓글 관련 메뉴(댓글주소, 수정/삭제, 댓글쓰기) hover 설정 */
+.comment-list ul li .control a:hover {
+  color: #28a745;
+}
+
+/* 댓글 창 테두리 */
+.thema_black .reply_write .thema_apply textarea {
+  border: 1px solid #eee;
+}
+
+/* 댓글 밑에 padding과 수직선 지우기 */
+.area_reply .box_reply_info {
+  padding-bottom: 0px;
+  border-bottom: 0px solid #eee;
+}
+
+/* 댓글 등록 버튼 */
+.thema_black button.thema_apply {
+  background: #28a745;
+}
+
+/* 댓글 등록 버튼(hover) */
+.thema_black button.thema_apply:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* 게시물 안쪽에 있는 페이징 지우기 */
+/* .inner_index .area_paging {
+  display: none;
+} */
+
+/* 카테고리의 다른 글 display none */
+.another_category {
+  display: none;
+}
+
+/* 본문 a href */
+.article_view a {
+  /* text-decoration: none;  */
+  color: #28a745;
+}
+
+/* 본문 a href(hover) */
+.article_view a:hover {
+  text-decoration: underline;
+  color: #28a745;
+}
+
+/* focus 속성 지우기 */
+.inp_search:focus,
+.btn_search_del:focus,
+.thema_black .reply_write .thema_apply textarea:focus {
+  outline: none;
 }
 
 /* ================================== */
