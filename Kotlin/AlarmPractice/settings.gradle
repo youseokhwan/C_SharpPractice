@@ -1,0 +1,2 @@
+rootProject.name='AlarmPractice'
+include ':app'
