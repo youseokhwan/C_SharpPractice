@@ -44,129 +44,208 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+  final items = List.generate(100, (i) => i).toList(); // 0부터 99까지의 값을 갖는 리스트 생성
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('제목'),
-      ),
-
-      // 1. Text
-//      body: Text('여기에 예제 작성'),
-
-      // 2. Container
-//        body: Container(
-//          color: Colors.red,
-//          width: 100,
-//          height: 100,
-//          padding: const EdgeInsets.all(8.0),
-//          margin: const EdgeInsets.all(8.0),
-//        ),
-
-      // 3. Column
-//        body: Column(
-//          children: <Widget>[
-//            Container(
-//              color: Colors.red,
-//              width: 100,
-//              height: 100,
-//              padding: const EdgeInsets.all(8.0),
-//              margin: const EdgeInsets.all(8.0),
-//            ),
-//            Container(
-//              color: Colors.green,
-//              width: 100,
-//              height: 100,
-//              padding: const EdgeInsets.all(8.0),
-//              margin: const EdgeInsets.all(8.0),
-//            ),
-//            Container(
-//              color: Colors.blue,
-//              width: 100,
-//              height: 100,
-//              padding: const EdgeInsets.all(8.0),
-//              margin: const EdgeInsets.all(8.0),
-//            ),
-//          ],
-//        ),
-
-      // 4. Row
-//        body: Row(
-//          mainAxisSize: MainAxisSize.max, // 최대: max, 최소: min
-//          mainAxisAlignment: MainAxisAlignment.center, // mainAxis는 Column의 경우 x축, Row의 경우 y축이 된다.
-//          crossAxisAlignment: CrossAxisAlignment.center, // crossAxis는 mainAxis의 반대 축을 의미한다.
-//          // 가운데 정렬: center, 왼쪽 정렬: start, 오른쪽 정렬: end
-//          // 그 외 spaceEvenly, spaceBetween, spaceAround 등이 있다.
-//          children: <Widget>[
-//            Container(
-//              color: Colors.red,
-//              width: 100,
-//              height: 100,
-//              padding: const EdgeInsets.all(8.0),
-//              margin: const EdgeInsets.all(8.0),
-//            ),
-//            Container(
-//              color: Colors.green,
-//              width: 100,
-//              height: 100,
-//              padding: const EdgeInsets.all(8.0),
-//              margin: const EdgeInsets.all(8.0),
-//            ),
-//            Container(
-//              color: Colors.blue,
-//              width: 100,
-//              height: 100,
-//              padding: const EdgeInsets.all(8.0),
-//              margin: const EdgeInsets.all(8.0),
-//            ),
-//          ],
-//        ),
-
-      // 5. Stack
-      body: Stack(
-        children: <Widget>[
-          Container(
-            color: Colors.red,
-            width: 100,
-            height: 100,
-            padding: const EdgeInsets.all(8.0),
-            margin: const EdgeInsets.all(8.0),
+    // 9. AppBar, TabBar, Tab, TabBarView
+    return DefaultTabController (
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Tab'),
+          bottom: TabBar( // Scaffold의 bottom 프로퍼티에 TabBar 지정
+            tabs: <Widget>[ // tabs 프로퍼티에 Tab의 리스트 지정
+              Tab(icon: Icon(Icons.tag_faces)),
+              Tab(text: '메뉴2'),
+              Tab(icon: Icon(Icons.info), text: '메뉴3'),
+            ],
           ),
-          Container(
-            color: Colors.green,
-            width: 80,
-            height: 80,
-            padding: const EdgeInsets.all(8.0),
-            margin: const EdgeInsets.all(8.0),
-          ),
-          Container(
-            color: Colors.blue,
-            width: 60,
-            height: 60,
-            padding: const EdgeInsets.all(8.0),
-            margin: const EdgeInsets.all(8.0),
-          ),
-        ],
-      ),
+        ),
+        body: TabBarView( // Scaffold의 body 프로퍼티에는 TabBarView 배치
+          children: <Widget>[ // children 프로퍼티에 표시할 화면 배치
+            Container(color: Colors.yellow),
+            Container(color: Colors.orange),
+            Container(color: Colors.red),
+          ]),
+        ),
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+        // 1. Text
+  //      body: Text('여기에 예제 작성'),
+
+        // 2. Container
+  //        body: Container(
+  //          color: Colors.red,
+  //          width: 100,
+  //          height: 100,
+  //          padding: const EdgeInsets.all(8.0),
+  //          margin: const EdgeInsets.all(8.0),
+  //        ),
+
+        // 3. Column
+  //        body: Column(
+  //          children: <Widget>[
+  //            Container(
+  //              color: Colors.red,
+  //              width: 100,
+  //              height: 100,
+  //              padding: const EdgeInsets.all(8.0),
+  //              margin: const EdgeInsets.all(8.0),
+  //            ),
+  //            Container(
+  //              color: Colors.green,
+  //              width: 100,
+  //              height: 100,
+  //              padding: const EdgeInsets.all(8.0),
+  //              margin: const EdgeInsets.all(8.0),
+  //            ),
+  //            Container(
+  //              color: Colors.blue,
+  //              width: 100,
+  //              height: 100,
+  //              padding: const EdgeInsets.all(8.0),
+  //              margin: const EdgeInsets.all(8.0),
+  //            ),
+  //          ],
+  //        ),
+
+        // 4. Row
+  //        body: Row(
+  //          mainAxisSize: MainAxisSize.max, // 최대: max, 최소: min
+  //          mainAxisAlignment: MainAxisAlignment.center, // mainAxis는 Column의 경우 x축, Row의 경우 y축이 된다.
+  //          crossAxisAlignment: CrossAxisAlignment.center, // crossAxis는 mainAxis의 반대 축을 의미한다.
+  //          // 가운데 정렬: center, 왼쪽 정렬: start, 오른쪽 정렬: end
+  //          // 그 외 spaceEvenly, spaceBetween, spaceAround 등이 있다.
+  //          children: <Widget>[
+  //            Container(
+  //              color: Colors.red,
+  //              width: 100,
+  //              height: 100,
+  //              padding: const EdgeInsets.all(8.0),
+  //              margin: const EdgeInsets.all(8.0),
+  //            ),
+  //            Container(
+  //              color: Colors.green,
+  //              width: 100,
+  //              height: 100,
+  //              padding: const EdgeInsets.all(8.0),
+  //              margin: const EdgeInsets.all(8.0),
+  //            ),
+  //            Container(
+  //              color: Colors.blue,
+  //              width: 100,
+  //              height: 100,
+  //              padding: const EdgeInsets.all(8.0),
+  //              margin: const EdgeInsets.all(8.0),
+  //            ),
+  //          ],
+  //        ),
+
+        // 5. Stack
+  //      body: Stack(
+  //        children: <Widget>[
+  //          Container(
+  //            color: Colors.red,
+  //            width: 100,
+  //            height: 100,
+  //            padding: const EdgeInsets.all(8.0),
+  //            margin: const EdgeInsets.all(8.0),
+  //          ),
+  //          Container(
+  //            color: Colors.green,
+  //            width: 80,
+  //            height: 80,
+  //            padding: const EdgeInsets.all(8.0),
+  //            margin: const EdgeInsets.all(8.0),
+  //          ),
+  //          Container(
+  //            color: Colors.blue,
+  //            width: 60,
+  //            height: 60,
+  //            padding: const EdgeInsets.all(8.0),
+  //            margin: const EdgeInsets.all(8.0),
+  //          ),
+  //        ],
+  //      ),
+
+        // 6. SingleChildScrollView
+        // Column은 해당 컴포넌트의 width값 만큼 스크롤 가능, ListBody는 화면 전체 스크롤 가능
+  //      body: SingleChildScrollView(
+  //        child: ListBody(
+  //          children: items.map((i) => Text('$i')).toList(),
+  //        )
+  //      ),
+
+        // 7. ListView, ListTile
+  //        body: ListView(
+  //          scrollDirection: Axis.vertical,
+  //          children: <Widget>[
+  //            ListTile(
+  //              leading: Icon(Icons.home),
+  //              title: Text('Home'),
+  //              trailing: Icon(Icons.navigate_next),
+  //              onTap: () {},
+  //            ),
+  //            ListTile(
+  //              leading: Icon(Icons.event),
+  //              title: Text('Event'),
+  //              trailing: Icon(Icons.navigate_next),
+  //              onTap: () {},
+  //            ),
+  //            ListTile(
+  //              leading: Icon(Icons.camera),
+  //              title: Text('Camera'),
+  //              trailing: Icon(Icons.navigate_next),
+  //              onTap: () {},
+  //            ),
+  //          ],
+  //        )
+
+        // 8. GridView
+  //        body: GridView.count(
+  //          crossAxisCount: 2, // 열 수
+  //          children: <Widget>[
+  //            Container(
+  //              color: Colors.red,
+  //              width: 100,
+  //              height: 100,
+  //              padding: const EdgeInsets.all(8.0),
+  //              margin: const EdgeInsets.all(8.0),
+  //            ),
+  //            Container(
+  //              color: Colors.green,
+  //              width: 100,
+  //              height: 100,
+  //              padding: const EdgeInsets.all(8.0),
+  //              margin: const EdgeInsets.all(8.0),
+  //            ),
+  //            Container(
+  //              color: Colors.blue,
+  //              width: 100,
+  //              height: 100,
+  //              padding: const EdgeInsets.all(8.0),
+  //              margin: const EdgeInsets.all(8.0),
+  //            ),
+  //          ],
+  //        )
+
+        // 10. BottomNavigationBar
+//        body: Scaffold(
+//          bottomNavigationBar: BottomNavigationBar(items: [
+//            BottomNavigationBarItem(
+//              icon: Icon(Icons.home),
+//              title: Text('Home'),
+//            ),
+//            BottomNavigationBarItem(
+//              icon: Icon(Icons.person),
+//              title: Text('Profile'),
+//            ),
+//            BottomNavigationBarItem(
+//              icon: Icon(Icons.notifications),
+//              title: Text('Notification'),
+//            ),
+//          ]),
+//        )
     );
   }
 }
