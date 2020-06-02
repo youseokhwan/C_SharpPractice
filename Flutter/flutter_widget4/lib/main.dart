@@ -45,6 +45,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  DateTime _selectedTime;
+  String _selectedTime2;
 
   void _incrementCounter() {
     setState(() {
@@ -72,9 +74,11 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: ListView(
+
+        // 1. AlertDialog
         children: <Widget>[
           ListTile(
-            title: Text('FlatButton'),
+            title: Text('AlertDialog'),
             onTap: () {
               showDialog(
                 context: context,
@@ -111,6 +115,49 @@ class _MyHomePageState extends State<MyHomePage> {
               );
             },
           ),
+
+          // 2. DatePicker
+          ListTile(
+            title: Text('DatePicker'),
+            onTap: () {
+              Future<DateTime> selectedDate = showDatePicker(
+                context: context,
+                initialDate: DateTime.now(), // 초깃값
+                firstDate: DateTime(2018),  // 시작일 2018년 1월 1일
+                lastDate: DateTime(2030),  // 마지막일 2030년 1월 1일
+                builder: (BuildContext context, Widget child) {
+                  return Theme(
+                    data: ThemeData.dark(),  // 다크 테마
+                    child: child,
+                  );
+                }
+              );
+              selectedDate.then((dataTime) {
+                setState(() {
+                  _selectedTime = dataTime;
+                });
+              });
+            },
+          ),
+          Text('$_selectedTime'),
+
+          // 3. TimePicker
+          ListTile(
+            title: Text('TimePicker'),
+            onTap: () {
+              Future<TimeOfDay> selectedTime2 = showTimePicker(
+                initialTime: TimeOfDay.now(),
+                context: context,
+              );
+              selectedTime2.then((timeOfDay) {
+                setState(() {
+                  _selectedTime2 = '${timeOfDay.hour}:${timeOfDay.minute}';
+                });
+              });
+            },
+          ),
+          Text('$_selectedTime2')
+
         ],
       )
     );
