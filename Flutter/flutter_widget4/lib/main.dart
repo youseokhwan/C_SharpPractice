@@ -156,8 +156,28 @@ class _MyHomePageState extends State<MyHomePage> {
               });
             },
           ),
-          Text('$_selectedTime2')
+          Text('$_selectedTime2'),
 
+          // 4. GestureDetector
+          // GestureDetector와 InkWell은 이벤트 프로퍼티가 없는 위젯에 이벤트를 적용
+          GestureDetector(
+            onTap: () {
+              print('GestureDetector 클릭!!');
+            },
+            child: Text('클릭 Me!!'),
+          ),
+          SizedBox(
+            height: 40
+          ),
+
+          // 5. InkWell
+          // InkWell은 물결 효과 포함
+          InkWell(
+            onTap: () {
+              print('InkWell 클릭!!');
+            },
+            child: Text('클릭 Me!!'),
+          ),
         ],
       )
     );
