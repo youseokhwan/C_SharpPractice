@@ -13,7 +13,7 @@ Playground는 '운동장'이라는 뜻으로,<br>
 Chrome 브라우저를 통해 다음 링크에 접속합니다.<br>
 [https://play.kotlinlang.org](https://play.kotlinlang.org)<br><br>
 
-(스크린샷)<br><br>
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2F5CtsE%2FbtqFxzCrGtz%2FKZZE1a8flR505gyJqKU7vk%2Fimg.png" alt="Screenshot01"><br><br>
 
 ① 코드를 작성하는 부분<br>
 ② 실행 결과 창<br>
@@ -29,10 +29,10 @@ Chrome 브라우저를 통해 다음 링크에 접속합니다.<br>
 ①에 코드를 작성한 후 \[Run\] 버튼을 클릭하면 위의 스크린샷과 같은 결과를 얻을 수 있습니다.<br><br>
 외부 파라미터의 경우 \[Setting\]의 Parameter 항목을 통해 사용할 수 있습니다.<br><br>
 
-(스크린샷)<br><br>
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FbuRow9%2FbtqFvua1oMn%2FosoH9QAKvv2GctckDq2iB1%2Fimg.png" alt="Screenshot01"><br><br>
 
-(스크린샷)<br><br>
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FNAYeE%2FbtqFyEptFXm%2FLMezEzxp7QucxxE1sR6KNK%2Fimg.png" alt="Screenshot01"><br><br>
 
 \[Share\]를 사용하면 아래 처럼 iframe 태그를 삽입할 수 있습니다.<br><br>
 
-(iframe 태그)
+(kotlin playground iframe)
