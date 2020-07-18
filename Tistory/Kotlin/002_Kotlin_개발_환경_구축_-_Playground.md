@@ -1,4 +1,4 @@
-참고) [Kotlin 개발 환경 구축 - IntelliJ IDEA](https://google.com/)
+참고) [Kotlin 개발 환경 구축 - IntelliJ IDEA](https://youseokhwan.tistory.com/10)
 
 ## 개요
 
