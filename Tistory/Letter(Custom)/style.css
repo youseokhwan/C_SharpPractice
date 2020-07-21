@@ -2609,5 +2609,10 @@ html, body {
   outline: none;
 }
 
+/* gist 밑줄 없애기 */
+.article_view table tr {
+  border-bottom : 0px;
+}
+
 /* ================================== */
 
