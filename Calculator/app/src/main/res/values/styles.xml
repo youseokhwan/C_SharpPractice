@@ -6,6 +6,8 @@
         <item name="colorPrimaryDark">?android:attr/colorBackground</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowLightStatusBar">?android:attr/isLightTheme</item>
+        <item name="android:navigationBarColor">?android:attr/isLightTheme</item>
+        <item name="android:windowLightNavigationBar">?android:attr/isLightTheme</item>
     </style>
 
 </resources>
