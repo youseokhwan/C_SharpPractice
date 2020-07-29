@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="unit_converter_title">Unit Converter</string>
 </resources>
