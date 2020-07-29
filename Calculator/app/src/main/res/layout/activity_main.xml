@@ -2,7 +2,100 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cstLyMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".MainActivity" />
+    app:layout_constraintHeight_percent="0.24"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edtExpression"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Expression"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F4C5C5"
+        android:text="Result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtExpression" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cstLyMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult">
+
+        <Button
+            android:id="@+id/btnHistory"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="his"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnConverter"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="conv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnHistory"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnScientific"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="sci"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnConverter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="del"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TableLayout
+        android:id="@+id/tbLyKeypad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F1E6C4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.58"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cstLyMenu">
+
+        <TableRow
+            android:id="@+id/tempRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
