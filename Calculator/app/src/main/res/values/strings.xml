@@ -1,4 +1,95 @@
 <resources>
     <string name="app_name">Calculator</string>
     <string name="unit_converter_title">Unit Converter</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!--단위 계산기 탭!-->
+    <string name="unit_area">Area</string>
+    <string name="unit_length">Length</string>
+    <string name="unit_temperature">Temperature</string>
+    <string name="unit_volume">Volume</string>
+    <string name="unit_mass">Mass</string>
+    <string name="unit_data">Data</string>
+    <string name="unit_speed">Speed</string>
+    <string name="unit_time">Time</string>
+    <!--Area Spinner 구성요소 !-->
+    <string name="area_acre">acre(ac)</string>
+    <string name="area_ares">Ares(a)</string>
+    <string name="area_hectares">Hectares(ha)</string>
+    <string name="area_square_centimeters">Square centimeters(㎠)</string>
+    <string name="area_square_feet">Square feet(ft²)</string>
+    <string name="area_square_meters">Square meters(㎡)</string>
+    <string name="area_pyeong">pyeong</string>
+    <string name="area_square_inches">Square inches(in²)</string>
+
+    <!-- Length Spinner 구성요소 !-->
+    <string name="length_millimeters">Millimeters (mm)</string>
+    <string name="length_centimeters">Centimeters (cm)</string>
+    <string name="length_meters">Meters (m)</string>
+    <string name="length_kilometers">Kilometers (km)</string>
+    <string name="length_inches">Inches (in)</string>
+    <string name="length_feet">Feet (ft)</string>
+    <string name="length_yards">Yards (yd)</string>
+    <string name="length_miles">Miles (mi)</string>
+    <string name="length_nautical_miles">Nautical miles (NM)</string>
+    <string name="length_mils">Mils (mil)</string>
+    <string name="length_ja">Ja</string>
+    <string name="length_le">Le</string>
+
+    <!-- Temperautre Spinner 구성요소 !-->
+    <string name="temperature_celsius">Celsius (℃)</string>
+    <string name="temperature_fahrenheit">Fahrenheit (℉)</string>
+    <string name="temperature_kelvin">Kelvin (K)</string>
+
+    <!-- Volume Spinner 구성요소 !-->
+    <string name="volume_uk_gallons">UK gallons (gal)</string>
+    <string name="volume_us_gallons">US gallons (gal)</string>
+    <string name="volume_liters">Liters (I)</string>
+    <string name="volume_milliliters">Milliliters (ml)</string>
+    <string name="volume_cubic_centimeters">Cubic centimeters (cc) (㎤)</string>
+    <string name="volume_cubic_meters">Cubic meters (㎥)</string>
+    <string name="volume_cubic_inches">Cubic inches (in³)</string>
+    <string name="volume_cubic_feet">Cubic feet (ft³)</string>
+    <string name="volume_mal">mal</string>
+    <string name="volume_dae">dae</string>
+
+    <!-- Mass Spinner 구성요소 !-->
+    <string name="mass_tons">Tons (t)</string>
+    <string name="mass_uk_tons">UK tons(t)</string>
+    <string name="mass_us_tons">US tons (t)</string>
+    <string name="mass_pounds">Pounds (lb)</string>
+    <string name="mass_ounces">Ounces (oz)</string>
+    <string name="mass_kilograms">Kilograms (kg)</string>
+    <string name="mass_grams">Grams (g)</string>
+    <string name="mass_gun">gun</string>
+    <string name="mass_don">don</string>
+
+    <!-- Data Spinner 구성요소 !-->
+    <string name="data_bits">Bits (bit)</string>
+    <string name="data_bytes">Bytes (B)</string>
+    <string name="data_kilobytes">Kilobytes (KB)</string>
+    <string name="data_megabytes">Megabytes (MB)</string>
+    <string name="data_gigabytes">Gigabytes (GB)</string>
+    <string name="data_terabytes">Terabytes (TB)</string>
+
+    <!-- Speed Spinner 구성요소 !-->
+    <string name="speed_meters_per_second">Meters per second (m/s)</string>
+    <string name="speed_meters_per_hour">Meters per hour (m/h)</string>
+    <string name="speed_kilometers_per_second">Kilometers per second (km/s)</string>
+    <string name="speed_kilometers_per_hour">Kilometers per hour (km/h)</string>
+    <string name="speed_inches_per_second">Inches per second (in/s)</string>
+    <string name="speed_inches_per_hour">Inches per hour (in/h)</string>
+    <string name="speed_feet_per_second">Feet per second (ft/s)</string>
+    <string name="speed_feet_per_hour">Feet per hour (ft/h)</string>
+    <string name="speed_miles_per_second">Miles per second (mi/s)</string>
+    <string name="speed_miles_per_hour">Miles per hour (mi/h)</string>
+    <string name="speed_knots">Knots (kn)</string>
+
+    <!-- Time Spinner 구성요소 !-->
+    <string name="time_milliseconds">Milliseconds (ms)</string>
+    <string name="time_seconds">Seconds (s)</string>
+    <string name="time_minutes">Minutes (min)</string>
+    <string name="time_hours">Hours (h)</string>
+    <string name="time_days">Days (d)</string>
+    <string name="time_weeks">Weeks (wk)</string>
+
 </resources>
