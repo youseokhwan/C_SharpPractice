@@ -2,6 +2,7 @@ package com.example.calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_unit_converter.*
@@ -31,18 +32,18 @@ class UnitConverterActivity : AppCompatActivity() {
         spinnerList.add(R.array.spinnerArraySpeed      .toString()) // 속도
         spinnerList.add(R.array.spinnerArrayTime       .toString()) // 시간
 
-        // 변수 Adapter에 ViewPager Adapter를 객체화
+        // 변수 Adapter에 ViewPagerAdapter를 객체화
         val adapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
 
         // Spinner 리스트들을 각 Fragment에 대입
-        for (i in 0..7) {
-            adapter!!.addFragment(UnitFragment.newInstance(spinnerList[i]))
+        for (i in spinnerList.indices) {
+            adapter.addFragment(UnitFragment.newInstance(spinnerList[i]))
         }
 
-        viewPager!!.adapter = adapter
+        viewPager.adapter = adapter
 
         // TabLayout에 ViewPager를 연동
-        TabLayoutMediator(tabLyUnit!!, viewPager!!, TabLayoutMediator.TabConfigurationStrategy { tab, position ->
+        TabLayoutMediator(tabLyUnit, viewPager, TabLayoutMediator.TabConfigurationStrategy { tab, position ->
                 when (position) {
                     0 -> tab.text = resources.getString(R.string.unit_area       ) // 면적
                     1 -> tab.text = resources.getString(R.string.unit_length     ) // 길이
@@ -53,7 +54,7 @@ class UnitConverterActivity : AppCompatActivity() {
                     6 -> tab.text = resources.getString(R.string.unit_speed      ) // 속도
                     7 -> tab.text = resources.getString(R.string.unit_time       ) // 시간
                     else -> {
-                        TODO()
+                        Log.d("Test", "Error!!")
                     }
                 }
             }).attach()

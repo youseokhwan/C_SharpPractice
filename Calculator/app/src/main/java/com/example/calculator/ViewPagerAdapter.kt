@@ -10,20 +10,20 @@ class ViewPagerAdapter(fragmentManager: FragmentManager?, lifecycle: Lifecycle)
     : FragmentStateAdapter(fragmentManager!!, lifecycle) {
 
     // Fragment를 담는 list 생성
-    private val list = ArrayList<Fragment>()
+    private val fragmentList = ArrayList<Fragment>()
 
     // Fragment의 위치를 반환하는 함수
     override fun createFragment(position: Int): Fragment {
-        return list[position]
+        return fragmentList[position]
     }
 
-    // list에 Fragment를 담는 함수
+    // FragmentList에 Fragment를 담는 함수
     fun addFragment(fragment: Fragment) {
-        list.add(fragment)
+        fragmentList.add(fragment)
     }
 
-    // list의 크기를 반환하는 함수
+    // FragmentList의 크기를 반환하는 함수
     override fun getItemCount(): Int {
-        return list.size
+        return fragmentList.size
     }
 }
