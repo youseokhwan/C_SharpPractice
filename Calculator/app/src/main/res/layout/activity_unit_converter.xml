@@ -43,7 +43,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TableLayout
-        android:id="@+id/tblLyKeypadUnitConverter"
+        android:id="@+id/tblLyUnitConverter"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#F1E6C4"
@@ -51,9 +51,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.5"
         app:layout_constraintStart_toStartOf="parent">
+
         <TableRow
-            android:id="@+id/tempRow"
+            android:id="@+id/rowUnitConverter0"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/rowUnitConverter1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/rowUnitConverter2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/rowUnitConverter3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

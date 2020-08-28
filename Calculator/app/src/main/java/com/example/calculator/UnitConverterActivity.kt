@@ -1,10 +1,12 @@
 package com.example.calculator
 
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_unit_converter.*
 
 class UnitConverterActivity : AppCompatActivity() {
@@ -58,6 +60,30 @@ class UnitConverterActivity : AppCompatActivity() {
                     }
                 }
             }).attach()
+
+        // 첫 번째 줄 키패드 버튼 추가
+        rowUnitConverter0.addView(CalcButton(createIntegerId("btnUnitConverter7"  ), "C" , null, applicationContext).button)
+        rowUnitConverter0.addView(CalcButton(createIntegerId("btnUnitConverter8"  ), "()", null, applicationContext).button)
+        rowUnitConverter0.addView(CalcButton(createIntegerId("btnUnitConverter9"  ), "%" , null, applicationContext).button)
+        rowUnitConverter0.addView(CalcButton(createIntegerId("btnUnitConverterDel"), "÷" , null, applicationContext).button)
+
+        // 두 번째 줄 키패드 버튼 추가
+        rowUnitConverter1.addView(CalcButton(createIntegerId("btnUnitConverter4"    ), "7", null  , applicationContext).button)
+        rowUnitConverter1.addView(CalcButton(createIntegerId("btnUnitConverter5"    ), "8", null  , applicationContext).button)
+        rowUnitConverter1.addView(CalcButton(createIntegerId("btnUnitConverter6"    ), "9", null  , applicationContext).button)
+        rowUnitConverter1.addView(CalcButton(createIntegerId("btnUnitConverterClear"), "×", "초기화", applicationContext).button)
+
+        // 세 번째 줄 키패드 버튼 추가
+        rowUnitConverter2.addView(CalcButton(createIntegerId("btnUnitConverter1" ), "4", null        , applicationContext).button)
+        rowUnitConverter2.addView(CalcButton(createIntegerId("btnUnitConverter2" ), "5", null        , applicationContext).button)
+        rowUnitConverter2.addView(CalcButton(createIntegerId("btnUnitConverter3" ), "6", null        , applicationContext).button)
+        rowUnitConverter2.addView(CalcButton(createIntegerId("btnUnitConverterUp"), "-", "위로 커서 이동", applicationContext).button)
+
+        // 네 번째 줄 키패드 버튼 추가
+        rowUnitConverter3.addView(CalcButton(createIntegerId("btnUnitConverterSign"), "1", null          , applicationContext).button)
+        rowUnitConverter3.addView(CalcButton(createIntegerId("btnUnitConverter0"   ), "2", null          , applicationContext).button)
+        rowUnitConverter3.addView(CalcButton(createIntegerId("btnUnitConverterDot" ), "3", null          , applicationContext).button)
+        rowUnitConverter3.addView(CalcButton(createIntegerId("btnUnitConverterDown"), "+", "아래로 커서 이동", applicationContext).button)
     }
 
     // ActionBar ItemSelected 이벤트
@@ -68,6 +94,12 @@ class UnitConverterActivity : AppCompatActivity() {
                 return true
             }
         }
+
         return super.onOptionsItemSelected(item)
+    }
+
+    // 입력받은 Id(String) 값을 R.id 형태의 Int로 생성
+    private fun createIntegerId(id: String): Int {
+        return resources.getIdentifier(id, "id", packageName)
     }
 }

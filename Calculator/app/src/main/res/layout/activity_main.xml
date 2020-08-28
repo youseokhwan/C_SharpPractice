@@ -80,7 +80,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TableLayout
-        android:id="@+id/tblLyKeypad"
+        android:id="@+id/tblLyMain"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#F1E6C4"
@@ -92,9 +92,36 @@
         app:layout_constraintTop_toBottomOf="@+id/cstLyMenu">
 
         <TableRow
-            android:id="@+id/tempRow"
+            android:id="@+id/rowMain0"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowMain1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/rowMain2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/rowMain3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/rowMain4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
     </TableLayout>
 
