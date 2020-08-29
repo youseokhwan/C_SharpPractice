@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import kotlinx.android.synthetic.main.fragment_unit.*
 import kotlinx.android.synthetic.main.fragment_unit.view.*
 
 class UnitFragment : Fragment() {
@@ -47,6 +48,12 @@ class UnitFragment : Fragment() {
 
         spinnerBefore.adapter = spinnerAdapter
         spinnerAfter .adapter = spinnerAdapter
+
+        // edtAreaBefore, edtAreaAfter 클릭 시 키보드 올라오지 않도록 설정
+        view.edtAreaBefore.setTextIsSelectable(true)
+        view.edtAreaBefore.showSoftInputOnFocus = false
+        view.edtAreaAfter .setTextIsSelectable(true)
+        view.edtAreaAfter .showSoftInputOnFocus = false
 
         return view
     }
