@@ -188,5 +188,6 @@
     <string name="keypad_history_hint">History</string>
     <string name="keypad_unit_converter_hint">Unit converter</string>
     <string name="keypad_scientific_mode_hint">Scientific mode</string>
+    <string name="keypad_normal_mode_hint">Normal mode</string>
 
 </resources>

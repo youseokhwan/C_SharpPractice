@@ -1,6 +1,7 @@
 package com.example.calculator
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,7 +27,21 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, UnitConverterActivity::class.java))
         }
 
+        // btnMode Click 이벤트
+        btnMode.setOnClickListener {
+            // Orientation 변경
+            requestedOrientation = if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+            } else {
+                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+            }
+
+            // TODO - 버튼을 통해 Orientation을 변경하더라도 다시 센서 감지를 할 수 있도록 구현해야 함
+            // 다시 Orientation 센서를 활성화 하는 코드 : requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR
+        }
+
         // 기기의 Orientation에 따른 Button Visibility 설정
+        // TODO - 모드 변경 시 tooltip을 바꿔야하므로 추후 onConfigurationChanged 메서드로 통합하기
         setButtonsVisibility()
     }
 

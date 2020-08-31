@@ -116,4 +116,5 @@
     <string name="keypad_history_hint">계산기록</string>
     <string name="keypad_unit_converter_hint">단위 계산기</string>
     <string name="keypad_scientific_mode_hint">공학용 모드</string>
+    <string name="keypad_normal_mode_hint">일반 모드</string>
 </resources>

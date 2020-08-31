@@ -64,10 +64,10 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnScientificMode"
+            android:id="@+id/btnMode"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
-            android:text="sci"
+            android:text="mode"
             android:textAllCaps="false"
             android:tooltipText="@string/keypad_scientific_mode_hint"
             app:layout_constraintBottom_toBottomOf="parent"
