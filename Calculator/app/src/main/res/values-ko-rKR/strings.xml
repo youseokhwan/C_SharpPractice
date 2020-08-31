@@ -113,4 +113,7 @@
     <string name="keypad_factorial_hint">계승</string>
     <string name="keypad_down_hint">아래로 커서 이동</string>
     <string name="keypad_up_hint">위로 커서 이동</string>
+    <string name="keypad_history_hint">계산기록</string>
+    <string name="keypad_unit_converter_hint">단위 계산기</string>
+    <string name="keypad_scientific_mode_hint">공학용 모드</string>
 </resources>

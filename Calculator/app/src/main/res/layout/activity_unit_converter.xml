@@ -126,7 +126,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_clear"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_clear_hint" />
         </TableRow>
 
         <TableRow
@@ -165,7 +166,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_up"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_up_hint" />
         </TableRow>
 
         <TableRow
@@ -204,7 +206,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_down"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_down_hint" />
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

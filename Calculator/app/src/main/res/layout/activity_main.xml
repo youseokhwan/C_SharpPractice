@@ -47,28 +47,31 @@
             android:layout_height="wrap_content"
             android:text="his"
             android:textAllCaps="false"
+            android:tooltipText="@string/keypad_history_hint"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnConverter"
+            android:id="@+id/btnUnitConverter"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:text="conv"
             android:textAllCaps="false"
+            android:tooltipText="@string/keypad_unit_converter_hint"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btnHistory"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnScientific"
+            android:id="@+id/btnScientificMode"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:text="sci"
             android:textAllCaps="false"
+            android:tooltipText="@string/keypad_scientific_mode_hint"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnConverter"
+            app:layout_constraintStart_toEndOf="@+id/btnUnitConverter"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
@@ -106,7 +109,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_switch"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_switch_hint" />
 
             <Button
                 android:id="@+id/btnMainRad"
@@ -114,7 +118,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_rad"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_rad_hint" />
 
             <Button
                 android:id="@+id/btnMainRoot"
@@ -122,7 +127,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_root"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_root_hint" />
 
             <Button
                 android:id="@+id/btnMainClear"
@@ -130,7 +136,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_clear"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_clear_hint" />
 
             <Button
                 android:id="@+id/btnMainBracket"
@@ -138,7 +145,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_bracket"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_bracket_hint" />
 
             <Button
                 android:id="@+id/btnMainPercent"
@@ -146,7 +154,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_percent"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_percent_hint" />
 
             <Button
                 android:id="@+id/btnMainDiv"
@@ -154,7 +163,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_div"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_div_hint" />
         </TableRow>
 
         <TableRow
@@ -169,7 +179,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_sin"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_sin_hint" />
 
             <Button
                 android:id="@+id/btnMainCos"
@@ -177,7 +188,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_cos"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_cos_hint" />
 
             <Button
                 android:id="@+id/btnMainTan"
@@ -185,7 +197,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_tan"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_tan_hint" />
 
             <Button
                 android:id="@+id/btnMain7"
@@ -217,7 +230,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_mul"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_mul_hint" />
         </TableRow>
 
         <TableRow
@@ -232,7 +246,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_ln"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_ln_hint" />
 
             <Button
                 android:id="@+id/btnMainLog"
@@ -240,15 +255,17 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_log"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_log_hint" />
 
             <Button
-                android:id="@+id/btnMainInverse"
+                android:id="@+id/btnMainInv"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_inverse"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_inv_hint" />
 
             <Button
                 android:id="@+id/btnMain4"
@@ -280,7 +297,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_sub"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_sub_hint" />
         </TableRow>
 
         <TableRow
@@ -295,7 +313,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_e_sup_x"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_e_sup_x_hint" />
 
             <Button
                 android:id="@+id/btnMainXSup2"
@@ -303,7 +322,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_x_sup_2"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_x_sup_2_hint" />
 
             <Button
                 android:id="@+id/btnMainXSupY"
@@ -311,7 +331,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_x_sup_y"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_x_sup_y_hint" />
 
             <Button
                 android:id="@+id/btnMain1"
@@ -343,7 +364,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_add"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_add_hint" />
         </TableRow>
 
         <TableRow
@@ -358,7 +380,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_abs"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_abs_hint" />
 
             <Button
                 android:id="@+id/btnMainPi"
@@ -366,7 +389,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_pi"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_pi_hint" />
 
             <Button
                 android:id="@+id/btnMainEuler"
@@ -374,7 +398,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_euler"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_euler_hint" />
 
             <Button
                 android:id="@+id/btnMainSign"
@@ -401,12 +426,13 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/btnMainCalc"
+                android:id="@+id/btnMainEqual"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/keypad_equal"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_equal_hint" />
         </TableRow>
 
     </TableLayout>

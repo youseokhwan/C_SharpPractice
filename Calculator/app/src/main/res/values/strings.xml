@@ -185,5 +185,8 @@
     <string name="keypad_factorial_hint">Factorial</string>
     <string name="keypad_up_hint">Move cursor up</string>
     <string name="keypad_down_hint">Move cursor down</string>
+    <string name="keypad_history_hint">History</string>
+    <string name="keypad_unit_converter_hint">Unit converter</string>
+    <string name="keypad_scientific_mode_hint">Scientific mode</string>
 
 </resources>
