@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Calculator</string>
     <string name="unit_converter_title">Unit Converter</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <!--단위 계산기 탭!-->
+
+    <!-- 단위 계산기 탭 !-->
     <string name="unit_area">Area</string>
     <string name="unit_length">Length</string>
     <string name="unit_temperature">Temperature</string>
@@ -11,6 +11,7 @@
     <string name="unit_data">Data</string>
     <string name="unit_speed">Speed</string>
     <string name="unit_time">Time</string>
+
     <!--Area Spinner 구성요소 !-->
     <string name="area_acre">acre(ac)</string>
     <string name="area_ares">Ares(a)</string>
@@ -91,5 +92,98 @@
     <string name="time_hours">Hours (h)</string>
     <string name="time_days">Days (d)</string>
     <string name="time_weeks">Weeks (wk)</string>
+
+    <!-- 키패드 -->
+    <string name="keypad_0" translatable="false">0</string>
+    <string name="keypad_1" translatable="false">1</string>
+    <string name="keypad_2" translatable="false">2</string>
+    <string name="keypad_3" translatable="false">3</string>
+    <string name="keypad_4" translatable="false">4</string>
+    <string name="keypad_5" translatable="false">5</string>
+    <string name="keypad_6" translatable="false">6</string>
+    <string name="keypad_7" translatable="false">7</string>
+    <string name="keypad_8" translatable="false">8</string>
+    <string name="keypad_9" translatable="false">9</string>
+    <string name="keypad_clear" translatable="false">C</string>
+    <string name="keypad_bracket" translatable="false">()</string>
+    <string name="keypad_percent" translatable="false">%</string>
+    <string name="keypad_div" translatable="false">÷</string>
+    <string name="keypad_add" translatable="false">+</string>
+    <string name="keypad_sub" translatable="false">-</string>
+    <string name="keypad_mul" translatable="false">×</string>
+    <string name="keypad_equal" translatable="false">=</string>
+    <string name="keypad_sign" translatable="false">+/-</string>
+    <string name="keypad_dot" translatable="false">.</string>
+    <string name="keypad_switch" translatable="false">⇆</string>
+    <string name="keypad_rad" translatable="false">Rad</string>
+    <string name="keypad_root" translatable="false">√</string>
+    <string name="keypad_sin" translatable="false">sin</string>
+    <string name="keypad_cos" translatable="false">cos</string>
+    <string name="keypad_tan" translatable="false">tan</string>
+    <string name="keypad_ln" translatable="false">ln</string>
+    <string name="keypad_log" translatable="false">log</string>
+    <string name="keypad_inverse" translatable="false">1/x</string>
+    <string name="keypad_e_sup_x" translatable="false">e<sup><small>x</small></sup></string>
+    <string name="keypad_x_sup_2" translatable="false">x<sup><small>2</small></sup></string>
+    <string name="keypad_x_sup_y" translatable="false">x<sup><small>y</small></sup></string>
+    <string name="keypad_abs" translatable="false">|x|</string>
+    <string name="keypad_pi" translatable="false">π</string>
+    <string name="keypad_euler" translatable="false">e</string>
+    <string name="keypad_cube_root" translatable="false"><sup><small>3</small></sup>√</string>
+    <string name="keypad_inv_sin" translatable="false">sin<sup><small>-1</small></sup></string>
+    <string name="keypad_inv_cos" translatable="false">cos<sup><small>-1</small></sup></string>
+    <string name="keypad_inv_tan" translatable="false">tan<sup><small>-1</small></sup></string>
+    <string name="keypad_sinh" translatable="false">sinh</string>
+    <string name="keypad_cosh" translatable="false">cosh</string>
+    <string name="keypad_tanh" translatable="false">tanh</string>
+    <string name="keypad_inv_sinh" translatable="false">sinh<sup><small>-1</small></sup></string>
+    <string name="keypad_inv_cosh" translatable="false">cosh<sup><small>-1</small></sup></string>
+    <string name="keypad_inv_tanh" translatable="false">tanh<sup><small>-1</small></sup></string>
+    <string name="keypad_2_sup_x" translatable="false">2<sup><small>x</small></sup></string>
+    <string name="keypad_x_sup_3" translatable="false">x<sup><small>3</small></sup></string>
+    <string name="keypad_factorial" translatable="false">x!</string>
+    <string name="keypad_del" translatable="false">⌫</string>
+    <string name="keypad_up" translatable="false">↑</string>
+    <string name="keypad_down" translatable="false">↓</string>
+
+    <!-- 키패드 LongClick 팝업 -->
+    <string name="keypad_clear_hint">Clear</string>
+    <string name="keypad_bracket_hint">Brackets</string>
+    <string name="keypad_percent_hint">Percentage</string>
+    <string name="keypad_div_hint">Division</string>
+    <string name="keypad_mul_hint">Multiplication</string>
+    <string name="keypad_sub_hint">Minus</string>
+    <string name="keypad_add_hint">Plus</string>
+    <string name="keypad_equal_hint">Equal</string>
+    <string name="keypad_switch_hint">Alternative functions</string>
+    <string name="keypad_rad_hint">Radian</string>
+    <string name="keypad_root_hint">Square root</string>
+    <string name="keypad_sin_hint">Sine</string>
+    <string name="keypad_cos_hint">Cosine</string>
+    <string name="keypad_tan_hint">Tangent</string>
+    <string name="keypad_ln_hint">Natural log</string>
+    <string name="keypad_log_hint">Logarithm</string>
+    <string name="keypad_inv_hint">Inverse number</string>
+    <string name="keypad_e_sup_x_hint">e to the power of x</string>
+    <string name="keypad_x_sup_2_hint">x squared</string>
+    <string name="keypad_x_sup_y_hint">x to the power of y</string>
+    <string name="keypad_abs_hint">Absolute value</string>
+    <string name="keypad_pi_hint">Pi</string>
+    <string name="keypad_euler_hint">Euler\'s number</string>
+    <string name="keypad_cube_root_hint">Cube root</string>
+    <string name="keypad_inv_sin_hint">Inverse sine</string>
+    <string name="keypad_inv_cos_hint">Inverse cosine</string>
+    <string name="keypad_inv_tan_hint">Inverse tangent</string>
+    <string name="keypad_sinh_hint">Hyperbolic sine</string>
+    <string name="keypad_cosh_hint">Hyperbolic cosine</string>
+    <string name="keypad_tanh_hint">Hyperbolic tangent</string>
+    <string name="keypad_inv_sinh_hint">Inverse hyperbolic sine</string>
+    <string name="keypad_inv_cosh_hint">Inverse hyperbolic cosine</string>
+    <string name="keypad_inv_tanh_hint">Inverse hyperbolic tangent</string>
+    <string name="keypad_2_sup_x_hint">2 to the power of x</string>
+    <string name="keypad_x_sup_3_hint">Cube</string>
+    <string name="keypad_factorial_hint">Factorial</string>
+    <string name="keypad_up_hint">Move cursor up</string>
+    <string name="keypad_down_hint">Move cursor down</string>
 
 </resources>
