@@ -38,8 +38,8 @@ class UnitFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         val view            = inflater.inflate(R.layout.fragment_unit, container, false)
-        val spinnerBefore = view.spinnerAreaBefore
-        val spinnerAfter  = view.spinnerAreaAfter
+        val spinnerBefore = view.spinnerUnitBefore
+        val spinnerAfter  = view.spinnerUnitAfter
 
         // Adapter를 사용해 전달받은 값 spinnerAdapter를 스피너에 적용 하기
         val spinnerAdapter = ArrayAdapter.createFromResource(
@@ -50,10 +50,10 @@ class UnitFragment : Fragment() {
         spinnerAfter .adapter = spinnerAdapter
 
         // edtAreaBefore, edtAreaAfter 클릭 시 키보드 올라오지 않도록 설정
-        view.edtAreaBefore.setTextIsSelectable(true)
-        view.edtAreaBefore.showSoftInputOnFocus = false
-        view.edtAreaAfter .setTextIsSelectable(true)
-        view.edtAreaAfter .showSoftInputOnFocus = false
+        view.edtUnitBefore.setTextIsSelectable(true)
+        view.edtUnitBefore.showSoftInputOnFocus = false
+        view.edtUnitAfter .setTextIsSelectable(true)
+        view.edtUnitAfter .showSoftInputOnFocus = false
 
         return view
     }

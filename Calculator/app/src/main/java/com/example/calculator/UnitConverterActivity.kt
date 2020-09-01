@@ -1,14 +1,11 @@
 package com.example.calculator
 
-import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_unit_converter.*
-import kotlinx.android.synthetic.main.fragment_unit.*
 
 class UnitConverterActivity : AppCompatActivity() {
 
