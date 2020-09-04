@@ -6,6 +6,8 @@ import android.util.Log
 import android.view.MenuItem
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_unit_converter.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class UnitConverterActivity : AppCompatActivity() {
 
@@ -20,24 +22,41 @@ class UnitConverterActivity : AppCompatActivity() {
         // ActionBar Home 버튼 Enable
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        // ArrayList에 Spinner 추가
-        val spinnerList = ArrayList<String>()
+        // spinnerList 정의
+        val spinnerList = ArrayList<MutableList<String>>()
 
-        spinnerList.add(R.array.spinnerArrayArea       .toString()) // 면적
-        spinnerList.add(R.array.spinnerArrayLength     .toString()) // 길이
-        spinnerList.add(R.array.spinnerArrayTemperature.toString()) // 온도
-        spinnerList.add(R.array.spinnerArrayVolume     .toString()) // 부피
-        spinnerList.add(R.array.spinnerArrayMass       .toString()) // 무게
-        spinnerList.add(R.array.spinnerArrayData       .toString()) // 데이터
-        spinnerList.add(R.array.spinnerArraySpeed      .toString()) // 속도
-        spinnerList.add(R.array.spinnerArrayTime       .toString()) // 시간
+        // string-array 리소스 참조
+        val areaList        = resources.getStringArray(R.array.spinnerArrayArea       ).toMutableList() // 면적
+        val lengthList      = resources.getStringArray(R.array.spinnerArrayLength     ).toMutableList() // 길이
+        val temperatureList = resources.getStringArray(R.array.spinnerArrayTemperature).toMutableList() // 온도
+        val volumeList      = resources.getStringArray(R.array.spinnerArrayVolume     ).toMutableList() // 부피
+        val massList        = resources.getStringArray(R.array.spinnerArrayMass       ).toMutableList() // 무게
+        val dataList        = resources.getStringArray(R.array.spinnerArrayData       ).toMutableList() // 데이터
+        val speedList       = resources.getStringArray(R.array.spinnerArraySpeed      ).toMutableList() // 속도
+        val timeList        = resources.getStringArray(R.array.spinnerArrayTime       ).toMutableList() // 시간
+
+        // 고유 단위 현지화
+        when (Locale.getDefault().language) {
+            "ko" -> { // 한국어
+                areaList  .add("평")
+                lengthList.addAll(listOf("자", "리"))
+                volumeList.addAll(listOf("말", "되"))
+                massList  .addAll(listOf("근", "돈"))
+            }
+            else -> {
+                // pass
+            }
+        }
+
+        // 각 단위 리스트를 spinnerList에 추가
+        spinnerList.addAll(mutableListOf(areaList, lengthList, temperatureList, volumeList, massList, dataList, speedList, timeList))
 
         // 변수 Adapter에 ViewPagerAdapter를 객체화
         val adapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
 
-        // Spinner 리스트들을 각 Fragment에 대입
-        for (i in spinnerList.indices) {
-            adapter.addFragment(UnitFragment.newInstance(spinnerList[i]))
+        // 각 단위 list를 adapter에 추가
+        for (unitList in spinnerList) {
+            adapter.addFragment(UnitFragment(unitList))
         }
 
         viewPager.adapter = adapter
