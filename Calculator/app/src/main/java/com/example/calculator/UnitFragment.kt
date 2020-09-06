@@ -13,37 +13,37 @@ import kotlinx.android.synthetic.main.fragment_unit.view.*
 class UnitFragment(private var spinnerList: MutableList<String>) : Fragment() {
 
     // string-array 리소스 참조
-    var areaList        : MutableList<String>? = null
-    var lengthList      : MutableList<String>? = null
-    var temperatureList : MutableList<String>? = null
-    var volumeList      : MutableList<String>? = null
-    var massList        : MutableList<String>? = null
-    var dataList        : MutableList<String>? = null
-    var speedList       : MutableList<String>? = null
-    var timeList        : MutableList<String>? = null
+    private var areaList        = mutableListOf<String>()
+    private var lengthList      = mutableListOf<String>()
+    private var temperatureList = mutableListOf<String>()
+    private var volumeList      = mutableListOf<String>()
+    private var massList        = mutableListOf<String>()
+    private var dataList        = mutableListOf<String>()
+    private var speedList       = mutableListOf<String>()
+    private var timeList        = mutableListOf<String>()
 
     // 단위를 위한 리스트 초기화
-    var areaSignList        : MutableList<String>? = null
-    var lengthSignList      : MutableList<String>? = null
-    var temperatureSignList : MutableList<String>? = null
-    var volumeSignList      : MutableList<String>? = null
-    var massSignList        : MutableList<String>? = null
-    var dataSignList        : MutableList<String>? = null
-    var speedSignList       : MutableList<String>? = null
-    var timeSignList        : MutableList<String>? = null
+    private var areaSignList        = mutableListOf<String>()
+    private var lengthSignList      = mutableListOf<String>()
+    private var temperatureSignList = mutableListOf<String>()
+    private var volumeSignList      = mutableListOf<String>()
+    private var massSignList        = mutableListOf<String>()
+    private var dataSignList        = mutableListOf<String>()
+    private var speedSignList       = mutableListOf<String>()
+    private var timeSignList        = mutableListOf<String>()
 
     // 이름 + 단위 리스트 초기화
-    val areaListAll        = mutableListOf<String>()
-    val lengthListAll      = mutableListOf<String>()
-    val temperatureListAll = mutableListOf<String>()
-    val volumeListAll      = mutableListOf<String>()
-    val massListAll        = mutableListOf<String>()
-    val dataListAll        = mutableListOf<String>()
-    val speedListAll       = mutableListOf<String>()
-    val timeListAll        = mutableListOf<String>()
+    private val areaSpinnerList        = mutableListOf<String>()
+    private val lengthSpinnerList      = mutableListOf<String>()
+    private val temperatureSpinnerList = mutableListOf<String>()
+    private val volumeSpinnerList      = mutableListOf<String>()
+    private val massSpinnerList        = mutableListOf<String>()
+    private val dataSpinnerList        = mutableListOf<String>()
+    private val speedSpinnerList       = mutableListOf<String>()
+    private val timeSpinnerList        = mutableListOf<String>()
 
-    //리스트 초기화 메소드
-    private fun initName(){
+    // 리스트 초기화 메소드
+    private fun initName() {
         // string-array 리소스 참조
         areaList        = resources.getStringArray(R.array.spinnerArrayArea       ).toMutableList() // 면적
         lengthList      = resources.getStringArray(R.array.spinnerArrayLength     ).toMutableList() // 길이
@@ -54,7 +54,8 @@ class UnitFragment(private var spinnerList: MutableList<String>) : Fragment() {
         speedList       = resources.getStringArray(R.array.spinnerArraySpeed      ).toMutableList() // 속도
         timeList        = resources.getStringArray(R.array.spinnerArrayTime       ).toMutableList() // 시간
     }
-    private fun initUnit(){
+
+    private fun initUnit() {
         // 단위를 위한 리스트
         areaSignList        = resources.getStringArray(R.array.spinnerArrayAreaSign       ).toMutableList() // 면적단위
         lengthSignList      = resources.getStringArray(R.array.spinnerArrayLengthSign     ).toMutableList() // 길이단위
@@ -65,42 +66,43 @@ class UnitFragment(private var spinnerList: MutableList<String>) : Fragment() {
         speedSignList       = resources.getStringArray(R.array.spinnerArraySpeedSign      ).toMutableList() // 속도단위
         timeSignList        = resources.getStringArray(R.array.spinnerArrayTimeSign       ).toMutableList() // 시간단위
     }
-    private fun initAll(){
+
+    private fun initAll() {
         // 이름 + 단위 리스트
-        for(i in areaList!!.indices) {
-            areaListAll!!.add(areaList!![i] + " (" + areaSignList!![i]+")")
+        for (i in areaList.indices) {
+            areaSpinnerList.add(areaList[i] + " (" + areaSignList[i]+")")
         }
-        for(i in lengthList!!.indices) {
-            lengthListAll!!.add(lengthList!![i] + " (" + lengthSignList!![i]+")")
+        for (i in lengthList.indices) {
+            lengthSpinnerList.add(lengthList[i] + " (" + lengthSignList[i]+")")
         }
-        for(i in temperatureList!!.indices) {
-            temperatureListAll!!.add(temperatureList!![i] + " (" + temperatureSignList!![i]+")")
+        for (i in temperatureList.indices) {
+            temperatureSpinnerList.add(temperatureList[i] + " (" + temperatureSignList[i]+")")
         }
-        for(i in volumeList!!.indices) {
-            volumeListAll!!.add(volumeList!![i] + " (" + volumeSignList!![i]+")")
+        for (i in volumeList.indices) {
+            volumeSpinnerList.add(volumeList[i] + " (" + volumeSignList[i]+")")
         }
-        for(i in massList!!.indices) {
-            massListAll!!.add(massList!![i] + " (" + massSignList!![i]+")")
+        for (i in massList.indices) {
+            massSpinnerList.add(massList[i] + " (" + massSignList[i]+")")
         }
-        for(i in dataList!!.indices) {
-            dataListAll!!.add(dataList!![i] + " (" + dataSignList!![i]+")")
+        for (i in dataList.indices) {
+            dataSpinnerList.add(dataList[i] + " (" + dataSignList[i]+")")
         }
-        for(i in speedList!!.indices) {
-            speedListAll!!.add(speedList!![i] + " (" + speedSignList!![i]+")")
+        for (i in speedList.indices) {
+            speedSpinnerList.add(speedList[i] + " (" + speedSignList[i]+")")
         }
-        for(i in timeList!!.indices) {
-            timeListAll!!.add(timeList!![i] + " (" + timeSignList!![i]+")")
+        for (i in timeList.indices) {
+            timeSpinnerList.add(timeList[i] + " (" + timeSignList[i]+")")
         }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        val view            = inflater.inflate(R.layout.fragment_unit, container, false)
+        val view          = inflater.inflate(R.layout.fragment_unit, container, false)
         val spinnerBefore = view.spinnerUnitBefore
         val spinnerAfter  = view.spinnerUnitAfter
         val txtUnitBefore = view.txtUnitBefore
-        val txtUnitAfter = view.txtUnitAfter
+        val txtUnitAfter  = view.txtUnitAfter
 
         // 파라미터로 받은 spinnerList 적용
         val adapter = ArrayAdapter<String>(context!!, R.layout.support_simple_spinner_dropdown_item, spinnerList)
@@ -108,70 +110,71 @@ class UnitFragment(private var spinnerList: MutableList<String>) : Fragment() {
         spinnerBefore.adapter = adapter
         spinnerAfter .adapter = adapter
 
-        //초기화 함수 호출
+        // 초기화 함수 호출
         initName()
         initUnit()
         initAll()
 
-        //Before 스피너 선택 시 txt 변경
+        // Before 스피너 선택 시 txt 변경
         spinnerBefore.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 Log.d("Test", "NothingSelected!!")
             }
+
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                for (i in areaListAll.indices) {
+                for (i in areaSpinnerList.indices) {
                     when (spinnerBefore.getItemAtPosition(position)) {
-                        areaListAll[i] -> {
-                            txtUnitBefore.text = areaSignList!![i]
+                        areaSpinnerList[i] -> {
+                            txtUnitBefore.text = areaSignList[i]
                         }
                     }
                 }
-                for (i in lengthListAll.indices) {
+                for (i in lengthSpinnerList.indices) {
                     when (spinnerBefore.getItemAtPosition(position)) {
-                        lengthListAll[i] -> {
-                            txtUnitBefore.text = lengthSignList!![i]
+                        lengthSpinnerList[i] -> {
+                            txtUnitBefore.text = lengthSignList[i]
                         }
                     }
                 }
-                for (i in temperatureListAll.indices) {
+                for (i in temperatureSpinnerList.indices) {
                     when (spinnerBefore.getItemAtPosition(position)) {
-                        temperatureListAll[i] -> {
-                            txtUnitBefore.text = temperatureSignList!![i]
+                        temperatureSpinnerList[i] -> {
+                            txtUnitBefore.text = temperatureSignList[i]
                         }
                     }
                 }
-                for (i in volumeListAll.indices) {
+                for (i in volumeSpinnerList.indices) {
                     when (spinnerBefore.getItemAtPosition(position)) {
-                        volumeListAll[i] -> {
-                            txtUnitBefore.text = volumeSignList!![i]
+                        volumeSpinnerList[i] -> {
+                            txtUnitBefore.text = volumeSignList[i]
                         }
                     }
                 }
-                for (i in massListAll.indices) {
+                for (i in massSpinnerList.indices) {
                     when (spinnerBefore.getItemAtPosition(position)) {
-                        massListAll[i] -> {
-                            txtUnitBefore.text = massSignList!![i]
+                        massSpinnerList[i] -> {
+                            txtUnitBefore.text = massSignList[i]
                         }
                     }
                 }
-                for (i in dataListAll.indices) {
+                for (i in dataSpinnerList.indices) {
                     when (spinnerBefore.getItemAtPosition(position)) {
-                        dataListAll[i] -> {
-                            txtUnitBefore.text = dataSignList!![i]
+                        dataSpinnerList[i] -> {
+                            txtUnitBefore.text = dataSignList[i]
                         }
                     }
                 }
-                for (i in speedListAll.indices) {
+                for (i in speedSpinnerList.indices) {
                     when (spinnerBefore.getItemAtPosition(position)) {
-                        speedListAll[i] -> {
-                            txtUnitBefore.text = speedSignList!![i]
+                        speedSpinnerList[i] -> {
+                            txtUnitBefore.text = speedSignList[i]
                         }
                     }
                 }
-                for (i in timeListAll.indices) {
+                for (i in timeSpinnerList.indices) {
                     when (spinnerBefore.getItemAtPosition(position)) {
-                        timeListAll[i] -> {
-                            txtUnitBefore.text = timeSignList!![i]
+                        timeSpinnerList[i] -> {
+                            txtUnitBefore.text = timeSignList[i]
                         }
                     }
                 }
@@ -213,65 +216,66 @@ class UnitFragment(private var spinnerList: MutableList<String>) : Fragment() {
             }
         }
 
-        //After 스피너 선택 시 txt 변경
+        // After 스피너 선택 시 txt 변경
         spinnerAfter.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 Log.d("Test", "NothingSelected!!")
             }
+
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                for (i in areaListAll.indices) {
+                for (i in areaSpinnerList.indices) {
                     when (spinnerAfter.getItemAtPosition(position)) {
-                        areaListAll[i] -> {
-                            txtUnitAfter.text = areaSignList!![i]
+                        areaSpinnerList[i] -> {
+                            txtUnitAfter.text = areaSignList[i]
                         }
                     }
                 }
-                for (i in lengthListAll.indices) {
+                for (i in lengthSpinnerList.indices) {
                     when (spinnerAfter.getItemAtPosition(position)) {
-                        lengthListAll[i] -> {
-                            txtUnitAfter.text = lengthSignList!![i]
+                        lengthSpinnerList[i] -> {
+                            txtUnitAfter.text = lengthSignList[i]
                         }
                     }
                 }
-                for (i in temperatureListAll.indices) {
+                for (i in temperatureSpinnerList.indices) {
                     when (spinnerAfter.getItemAtPosition(position)) {
-                        temperatureListAll[i] -> {
-                            txtUnitAfter.text = temperatureSignList!![i]
+                        temperatureSpinnerList[i] -> {
+                            txtUnitAfter.text = temperatureSignList[i]
                         }
                     }
                 }
-                for (i in volumeListAll.indices) {
+                for (i in volumeSpinnerList.indices) {
                     when (spinnerAfter.getItemAtPosition(position)) {
-                        volumeListAll[i] -> {
-                            txtUnitAfter.text = volumeSignList!![i]
+                        volumeSpinnerList[i] -> {
+                            txtUnitAfter.text = volumeSignList[i]
                         }
                     }
                 }
-                for (i in massListAll.indices) {
+                for (i in massSpinnerList.indices) {
                     when (spinnerAfter.getItemAtPosition(position)) {
-                        massListAll[i] -> {
-                            txtUnitAfter.text = massSignList!![i]
+                        massSpinnerList[i] -> {
+                            txtUnitAfter.text = massSignList[i]
                         }
                     }
                 }
-                for (i in dataListAll.indices) {
+                for (i in dataSpinnerList.indices) {
                     when (spinnerAfter.getItemAtPosition(position)) {
-                        dataListAll[i] -> {
-                            txtUnitAfter.text = dataSignList!![i]
+                        dataSpinnerList[i] -> {
+                            txtUnitAfter.text = dataSignList[i]
                         }
                     }
                 }
-                for (i in speedListAll.indices) {
+                for (i in speedSpinnerList.indices) {
                     when (spinnerAfter.getItemAtPosition(position)) {
-                        speedListAll[i] -> {
-                            txtUnitAfter.text = speedSignList!![i]
+                        speedSpinnerList[i] -> {
+                            txtUnitAfter.text = speedSignList[i]
                         }
                     }
                 }
-                for (i in timeListAll.indices) {
+                for (i in timeSpinnerList.indices) {
                     when (spinnerAfter.getItemAtPosition(position)) {
-                        timeListAll[i] -> {
-                            txtUnitAfter.text = timeSignList!![i]
+                        timeSpinnerList[i] -> {
+                            txtUnitAfter.text = timeSignList[i]
                         }
                     }
                 }

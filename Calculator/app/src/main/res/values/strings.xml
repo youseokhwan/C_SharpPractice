@@ -22,71 +22,71 @@
     <string name="area_square_inches">Square inches</string>
 
     <!-- Length Spinner 구성요소 !-->
-    <string name="length_millimeters">"Millimeters "</string>
-    <string name="length_centimeters">"Centimeters "</string>
-    <string name="length_meters">"Meters "</string>
-    <string name="length_kilometers">"Kilometers "</string>
-    <string name="length_inches">"Inches "</string>
-    <string name="length_feet">"Feet "</string>
-    <string name="length_yards">"Yards "</string>
-    <string name="length_miles">"Miles "</string>
-    <string name="length_nautical_miles">"Nautical miles "</string>
-    <string name="length_mils">"Mils "</string>
+    <string name="length_millimeters">Millimeters</string>
+    <string name="length_centimeters">Centimeters</string>
+    <string name="length_meters">Meters</string>
+    <string name="length_kilometers">Kilometers</string>
+    <string name="length_inches">Inches</string>
+    <string name="length_feet">Feet</string>
+    <string name="length_yards">Yards</string>
+    <string name="length_miles">Miles</string>
+    <string name="length_nautical_miles">Nautical miles</string>
+    <string name="length_mils">Mils</string>
     <string name="length_ja">Ja</string>
     <string name="length_le">Le</string>
 
     <!-- Temperautre Spinner 구성요소 !-->
-    <string name="temperature_celsius">"Celsius "</string>
-    <string name="temperature_fahrenheit">"Fahrenheit "</string>
-    <string name="temperature_kelvin">"Kelvin "</string>
+    <string name="temperature_celsius">Celsius</string>
+    <string name="temperature_fahrenheit">Fahrenheit</string>
+    <string name="temperature_kelvin">Kelvin</string>
 
     <!-- Volume Spinner 구성요소 !-->
-    <string name="volume_uk_gallons">"UK gallons "</string>
-    <string name="volume_us_gallons">"US gallons "</string>
-    <string name="volume_liters">"Liters "</string>
-    <string name="volume_milliliters">"Milliliters "</string>
-    <string name="volume_cubic_centimeters">"Cubic centimeters (cc) "</string>
-    <string name="volume_cubic_meters">"Cubic meters "</string>
-    <string name="volume_cubic_inches">"Cubic inches "</string>
-    <string name="volume_cubic_feet">"Cubic feet "</string>
+    <string name="volume_uk_gallons">UK gallons</string>
+    <string name="volume_us_gallons">US gallons</string>
+    <string name="volume_liters">Liters</string>
+    <string name="volume_milliliters">Milliliters</string>
+    <string name="volume_cubic_centimeters">Cubic centimeters (cc)</string>
+    <string name="volume_cubic_meters">Cubic meters</string>
+    <string name="volume_cubic_inches">Cubic inches</string>
+    <string name="volume_cubic_feet">Cubic feet</string>
 
     <!-- Mass Spinner 구성요소 !-->
-    <string name="mass_tons">"Tons "</string>
+    <string name="mass_tons">Tons</string>
     <string name="mass_uk_tons">UK tons</string>
-    <string name="mass_us_tons">"US tons "</string>
-    <string name="mass_pounds">"Pounds "</string>
-    <string name="mass_ounces">"Ounces "</string>
-    <string name="mass_kilograms">"Kilograms "</string>
-    <string name="mass_grams">"Grams "</string>
+    <string name="mass_us_tons">US tons</string>
+    <string name="mass_pounds">Pounds</string>
+    <string name="mass_ounces">Ounces</string>
+    <string name="mass_kilograms">Kilograms</string>
+    <string name="mass_grams">Grams</string>
 
     <!-- Data Spinner 구성요소 !-->
-    <string name="data_bits">"Bits "</string>
-    <string name="data_bytes">"Bytes "</string>
-    <string name="data_kilobytes">"Kilobytes "</string>
-    <string name="data_megabytes">"Megabytes "</string>
-    <string name="data_gigabytes">"Gigabytes "</string>
-    <string name="data_terabytes">"Terabytes "</string>
+    <string name="data_bits">Bits</string>
+    <string name="data_bytes">Bytes</string>
+    <string name="data_kilobytes">Kilobytes</string>
+    <string name="data_megabytes">Megabytes</string>
+    <string name="data_gigabytes">Gigabytes</string>
+    <string name="data_terabytes">Terabytes</string>
 
     <!-- Speed Spinner 구성요소 !-->
-    <string name="speed_meters_per_second">"Meters per second "</string>
-    <string name="speed_meters_per_hour">"Meters per hour "</string>
-    <string name="speed_kilometers_per_second">"Kilometers per second "</string>
-    <string name="speed_kilometers_per_hour">"Kilometers per hour "</string>
-    <string name="speed_inches_per_second">"Inches per second "</string>
-    <string name="speed_inches_per_hour">"Inches per hour "</string>
-    <string name="speed_feet_per_second">"Feet per second "</string>
-    <string name="speed_feet_per_hour">"Feet per hour "</string>
-    <string name="speed_miles_per_second">"Miles per second "</string>
-    <string name="speed_miles_per_hour">"Miles per hour "</string>
-    <string name="speed_knots">"Knots "</string>
+    <string name="speed_meters_per_second">Meters per second</string>
+    <string name="speed_meters_per_hour">Meters per hour</string>
+    <string name="speed_kilometers_per_second">Kilometers per second</string>
+    <string name="speed_kilometers_per_hour">Kilometers per hour</string>
+    <string name="speed_inches_per_second">Inches per second</string>
+    <string name="speed_inches_per_hour">Inches per hour</string>
+    <string name="speed_feet_per_second">Feet per second</string>
+    <string name="speed_feet_per_hour">Feet per hour</string>
+    <string name="speed_miles_per_second">Miles per second</string>
+    <string name="speed_miles_per_hour">Miles per hour</string>
+    <string name="speed_knots">Knots</string>
 
     <!-- Time Spinner 구성요소 !-->
-    <string name="time_milliseconds">"Milliseconds "</string>
+    <string name="time_milliseconds">Milliseconds</string>
     <string name="time_seconds">Seconds</string>
-    <string name="time_minutes">"Minutes "</string>
-    <string name="time_hours">"Hours "</string>
-    <string name="time_days">"Days "</string>
-    <string name="time_weeks">"Weeks "</string>
+    <string name="time_minutes">Minutes</string>
+    <string name="time_hours">Hours</string>
+    <string name="time_days">Days</string>
+    <string name="time_weeks">Weeks</string>
 
     <!-- 키패드 -->
     <string name="keypad_0" translatable="false">0</string>

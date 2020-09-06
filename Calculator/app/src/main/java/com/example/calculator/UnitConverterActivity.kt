@@ -12,37 +12,37 @@ import kotlin.collections.ArrayList
 class UnitConverterActivity : AppCompatActivity() {
 
     // string-array 리소스 참조
-    private var areaList        : MutableList<String>? = null
-    private var lengthList      : MutableList<String>? = null
-    private var temperatureList : MutableList<String>? = null
-    private var volumeList      : MutableList<String>? = null
-    private var massList        : MutableList<String>? = null
-    private var dataList        : MutableList<String>? = null
-    private var speedList       : MutableList<String>? = null
-    private var timeList        : MutableList<String>? = null
+    private var areaList        = mutableListOf<String>()
+    private var lengthList      = mutableListOf<String>()
+    private var temperatureList = mutableListOf<String>()
+    private var volumeList      = mutableListOf<String>()
+    private var massList        = mutableListOf<String>()
+    private var dataList        = mutableListOf<String>()
+    private var speedList       = mutableListOf<String>()
+    private var timeList        = mutableListOf<String>()
 
     // 단위를 위한 리스트 초기화
-    private var areaSignList        : MutableList<String>? = null
-    private var lengthSignList      : MutableList<String>? = null
-    private var temperatureSignList : MutableList<String>? = null
-    private var volumeSignList      : MutableList<String>? = null
-    private var massSignList        : MutableList<String>? = null
-    private var dataSignList        : MutableList<String>? = null
-    private var speedSignList       : MutableList<String>? = null
-    private var timeSignList        : MutableList<String>? = null
+    private var areaSignList        = mutableListOf<String>()
+    private var lengthSignList      = mutableListOf<String>()
+    private var temperatureSignList = mutableListOf<String>()
+    private var volumeSignList      = mutableListOf<String>()
+    private var massSignList        = mutableListOf<String>()
+    private var dataSignList        = mutableListOf<String>()
+    private var speedSignList       = mutableListOf<String>()
+    private var timeSignList        = mutableListOf<String>()
 
     // 이름 + 단위 리스트 초기화
-    private val areaListAll        = mutableListOf<String>()
-    private val lengthListAll      = mutableListOf<String>()
-    private val temperatureListAll = mutableListOf<String>()
-    private val volumeListAll      = mutableListOf<String>()
-    private val massListAll        = mutableListOf<String>()
-    private val dataListAll        = mutableListOf<String>()
-    private val speedListAll       = mutableListOf<String>()
-    private val timeListAll        = mutableListOf<String>()
+    private val areaSpinnerList        = mutableListOf<String>()
+    private val lengthSpinnerList      = mutableListOf<String>()
+    private val temperatureSpinnerList = mutableListOf<String>()
+    private val volumeSpinnerList      = mutableListOf<String>()
+    private val massSpinnerList        = mutableListOf<String>()
+    private val dataSpinnerList        = mutableListOf<String>()
+    private val speedSpinnerList       = mutableListOf<String>()
+    private val timeSpinnerList        = mutableListOf<String>()
 
-    //리스트 초기화 메소드
-    private fun initName(){
+    // 리스트 초기화 메소드
+    private fun initName() {
         // string-array 리소스 참조
         areaList        = resources.getStringArray(R.array.spinnerArrayArea       ).toMutableList() // 면적
         lengthList      = resources.getStringArray(R.array.spinnerArrayLength     ).toMutableList() // 길이
@@ -53,7 +53,7 @@ class UnitConverterActivity : AppCompatActivity() {
         speedList       = resources.getStringArray(R.array.spinnerArraySpeed      ).toMutableList() // 속도
         timeList        = resources.getStringArray(R.array.spinnerArrayTime       ).toMutableList() // 시간
     }
-    private fun initUnit(){
+    private fun initUnit() {
         // 단위를 위한 리스트 초기화
         areaSignList        = resources.getStringArray(R.array.spinnerArrayAreaSign       ).toMutableList() // 면적단위
         lengthSignList      = resources.getStringArray(R.array.spinnerArrayLengthSign     ).toMutableList() // 길이단위
@@ -64,31 +64,31 @@ class UnitConverterActivity : AppCompatActivity() {
         speedSignList       = resources.getStringArray(R.array.spinnerArraySpeedSign      ).toMutableList() // 속도단위
         timeSignList        = resources.getStringArray(R.array.spinnerArrayTimeSign       ).toMutableList() // 시간단위
     }
-    private fun initAll(){
-        // 이름 + 단위 리스트 초기화
-        for(i in areaList!!.indices) {
-            areaListAll!!.add(areaList!![i] + " (" + areaSignList!![i]+")")
+    private fun initAll() {
+        // 이름 + 단위 리스트
+        for (i in areaList.indices) {
+            areaSpinnerList.add(areaList[i] + " (" + areaSignList[i]+")")
         }
-        for(i in lengthList!!.indices) {
-            lengthListAll!!.add(lengthList!![i] + " (" + lengthSignList!![i]+")")
+        for (i in lengthList.indices) {
+            lengthSpinnerList.add(lengthList[i] + " (" + lengthSignList[i]+")")
         }
-        for(i in temperatureList!!.indices) {
-            temperatureListAll!!.add(temperatureList!![i] + " (" + temperatureSignList!![i]+")")
+        for (i in temperatureList.indices) {
+            temperatureSpinnerList.add(temperatureList[i] + " (" + temperatureSignList[i]+")")
         }
-        for(i in volumeList!!.indices) {
-            volumeListAll!!.add(volumeList!![i] + " (" + volumeSignList!![i]+")")
+        for (i in volumeList.indices) {
+            volumeSpinnerList.add(volumeList[i] + " (" + volumeSignList[i]+")")
         }
-        for(i in massList!!.indices) {
-            massListAll!!.add(massList!![i] + " (" + massSignList!![i]+")")
+        for (i in massList.indices) {
+            massSpinnerList.add(massList[i] + " (" + massSignList[i]+")")
         }
-        for(i in dataList!!.indices) {
-            dataListAll!!.add(dataList!![i] + " (" + dataSignList!![i]+")")
+        for (i in dataList.indices) {
+            dataSpinnerList.add(dataList[i] + " (" + dataSignList[i]+")")
         }
-        for(i in speedList!!.indices) {
-            speedListAll!!.add(speedList!![i] + " (" + speedSignList!![i]+")")
+        for (i in speedList.indices) {
+            speedSpinnerList.add(speedList[i] + " (" + speedSignList[i]+")")
         }
-        for(i in timeList!!.indices) {
-            timeListAll!!.add(timeList!![i] + " (" + timeSignList!![i]+")")
+        for (i in timeList.indices) {
+            timeSpinnerList.add(timeList[i] + " (" + timeSignList[i]+")")
         }
     }
 
@@ -103,7 +103,7 @@ class UnitConverterActivity : AppCompatActivity() {
         // ActionBar Home 버튼 Enable
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        //초기화 메소드 호출
+        // 초기화 메소드 호출
         initName()
         initUnit()
         initAll()
@@ -114,10 +114,10 @@ class UnitConverterActivity : AppCompatActivity() {
         // 고유 단위 현지화
         when (Locale.getDefault().language) {
             "ko" -> { // 한국어
-                areaListAll!!  .add("평"+" (평)")
-                lengthListAll!!.addAll(listOf("자"+" (자)", "리"+" (리)"))
-                volumeListAll!!.addAll(listOf("말"+" (말)", "되"+" (되)"))
-                massListAll!!  .addAll(listOf("근"+" (근)", "돈"+" (돈)"))
+                areaSpinnerList!!  .add("평"+" (평)")
+                lengthSpinnerList!!.addAll(listOf("자"+" (자)", "리"+" (리)"))
+                volumeSpinnerList!!.addAll(listOf("말"+" (말)", "되"+" (되)"))
+                massSpinnerList!!  .addAll(listOf("근"+" (근)", "돈"+" (돈)"))
             }
             else -> {
                 // pass
@@ -125,14 +125,14 @@ class UnitConverterActivity : AppCompatActivity() {
         }
 
         // 각 단위 리스트를 spinnerList에 추가
-        spinnerList.addAll(mutableListOf(areaListAll, lengthListAll, temperatureListAll, volumeListAll, massListAll, dataListAll, speedListAll, timeListAll))
+        spinnerList.addAll(mutableListOf(areaSpinnerList, lengthSpinnerList, temperatureSpinnerList, volumeSpinnerList, massSpinnerList, dataSpinnerList, speedSpinnerList, timeSpinnerList))
 
         // 변수 Adapter에 ViewPagerAdapter를 객체화
         val adapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
 
         // 각 단위 list를 adapter에 추가
         for (unitList in spinnerList) {
-            adapter.addFragment(UnitFragment((unitList)))
+            adapter.addFragment(UnitFragment(unitList))
         }
 
         viewPager.adapter = adapter
