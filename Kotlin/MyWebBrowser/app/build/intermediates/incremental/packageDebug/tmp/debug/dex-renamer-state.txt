@@ -1,4 +1,0 @@
-#Wed Mar 18 21:55:49 KST 2020
-base.0=/Users/youseokhwan/GitHub/today-i-learned/Kotlin/MyWebBrowser/app/build/intermediates/dex/debug/out/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
