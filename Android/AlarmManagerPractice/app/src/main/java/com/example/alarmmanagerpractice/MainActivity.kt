@@ -17,32 +17,35 @@ class MainActivity : AppCompatActivity() {
 
         val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val alarmIntent = Intent(applicationContext, AlarmReceiver::class.java).let { intent ->
-            PendingIntent.getBroadcast(applicationContext, 1, intent, 0)
-        }
-        val calendar = Calendar.getInstance().apply {
-            timeInMillis = System.currentTimeMillis()
-            set(Calendar.HOUR_OF_DAY, 22)
-            set(Calendar.MINUTE, 29)
-            set(Calendar.SECOND, 0)
+            PendingIntent.getBroadcast(applicationContext, 0, intent, 0)
         }
 
         btnStart.setOnClickListener {
+            alarmManager.cancel(alarmIntent)
+
+            val calendar = Calendar.getInstance().apply {
+                timeInMillis = System.currentTimeMillis()
+                set(Calendar.HOUR_OF_DAY, timePicker.hour)
+                set(Calendar.MINUTE, timePicker.minute)
+                set(Calendar.SECOND, 0)
+            }
+
             // 알람 시작
             alarmManager.setInexactRepeating(
                 AlarmManager.RTC_WAKEUP,
                 calendar.timeInMillis,
-                AlarmManager.INTERVAL_FIFTEEN_MINUTES,
+                AlarmManager.INTERVAL_DAY,
                 alarmIntent
             )
 
-            Toast.makeText(this, "AlarmManager Start", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "${timePicker.hour}시 ${timePicker.minute}분으로 알람 설정되었습니다.", Toast.LENGTH_SHORT).show()
         }
 
         btnStop.setOnClickListener {
             // 알람 종료
             alarmManager.cancel(alarmIntent)
 
-            Toast.makeText(this, "AlarmManager Stop", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "알람이 취소되었습니다.", Toast.LENGTH_SHORT).show()
         }
     }
 }
