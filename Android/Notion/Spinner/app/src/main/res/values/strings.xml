@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Spinner</string>
-    <string-array name="lunch_list">
-        <item>돈가스</item>
-        <item>짜장면</item>
-        <item>햄버거</item>
-    </string-array>
-</resources>
