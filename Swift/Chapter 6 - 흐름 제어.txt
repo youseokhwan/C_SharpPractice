@@ -1,0 +1,54 @@
+Chapter 6 - 흐름 제어
+
+소괄호()는 생략가능, 중괄호{}는 반드시 사용해야 함
+조건문에 해당하는 guard는 14장에서 다룸
+
+[if]
+- if의 경우 조건이 반드시 bool 타입이여야 함
+- 다른 언어들처럼 type 자체가 올 수 없음
+```swift
+if 3 { // error
+    print(true)
+}
+```
+
+[switch]
+- 다른 언어와 다르게 break를 반드시 써야하는 것은 아님
+- case 내부 코드를 모두 실행하면 switch 구문은 종료
+- 만약 다음 case로 넘어가고 싶으면 fallthrough 키워드 사용
+- case에 여러 값을 비교하고 싶으면 ,로 구분(기존처럼 case X:를 연달아 사용 X)
+```
+case 1, 2, 3: // O
+
+case 1:
+case 2:
+case 3: // X
+```
+- 열거형의 경우 추후에 추가될 요소에 대비해 @unknown attribute를 추가할 수 있음
+```
+switch lunchMenu {
+case .chicken:
+    print("치킨")
+@unknown case _: // 마지막에만 올 수 있음
+    print("unknown menu")
+}
+```
+
+[for-in]
+- 기존 C 스타일의 for문은 삭제되었음
+- 사용법은 Kotlin, Python 등과 같음
+
+[while]
+- while도 if와 마찬가지로 조건값은 반드시 bool 타입이 와야함
+- do-while의 경우 repeat { ... } while true로 사용함
+- 나머지는 같음
+
+[Statement Label: 구문 이름표]
+- label을 사용하면 중첩 반복문 등에서 break나 continue의 타겟을 명확히 할 수 있음
+```
+numbersLoop: for num in numbers {
+    printLoop: while true {
+        break printLoop
+    }
+}
+```
