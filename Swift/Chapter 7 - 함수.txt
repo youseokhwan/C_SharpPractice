@@ -1,0 +1,50 @@
+Chapter 7 - 함수
+
+Swift에서 함수는 일급 객체이므로 하나의 값으로도 사용할 수 있음
+또한 자유도 높은 문법 중 하나이므로 유의
+
+기본적인 형태는 다음과 같음
+```
+func hello(name: String) -> String {
+    return "Hello \(name)!"
+}
+```
+
+함수 내부 코드가 1줄이고, 그 결과의 타입이 반환 타입과 같다면 return 키워드 생략 가능
+```
+func introduce(name: String) -> String {
+    "제 이름은 " + name + "입니다"
+}
+```
+
+매개변수 레이블(Parameter Label)과 전달인자 레이블(Argument Label)을 따로 지정 가능
+호출 시 전달인자 레이블을 사용하고 싶지 않다면 Argument Label을 와일드카드(_) 처리하면 됨
+-> 구현부에서는 Parameter Label만 사용할 수 있고, 호출할 때는 Argument Label만 사용할 수 있음
+```
+func sayHello(from myName: String, to name: String) -> String {
+    return "Hello \(name)!, I'm \(name)"
+}
+
+print(sayHello(from: "yagom", to: "Jenny"))
+```
+
+만약 전달인자 레이블을 없애고 싶으면 _ 사용하면 된다.
+Argument Label이 다르면 이름이 다른 함수로 인식되어 함수 오버로딩이 가능하다.
+
+매개변수의 타입에 ...을 붙이면 가변 매개변수가 된다.
+1개 이상의 값을 받아올 수 있으며 함수 내에 1개만 사용 가능하다. -> 왜??
+
+inout 키워드를 사용하면 참조를 전달할 수 있다.
+하지만 지양하는 패턴이고 메모리 안전을 이유로 제약이 많다.
+
+Never 키워드를 사용하면 비반환 함수(Nonreturning Function)를 만들 수 있음
+주로 오류를 보고하는 용도로 쓰이는 듯함
+
+@discardableResult 속성을 사용하면 반환 값을 무시할 수 있다.
+```
+@discardableResult func discardableResultSay(_ something: String) -> String {
+    print(something)
+    return something
+}
+discardableResultSay("hello") // 경고 발생하지 않음
+```
