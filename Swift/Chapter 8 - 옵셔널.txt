@@ -1,0 +1,40 @@
+Chapter 8 - 옵셔널
+
+Swift는 NULL을 nil로 표현하며, 옵셔널(Optionals)는 변수나 상수의 값이 nil일 수 있음을 뜻함
+옵셔널과 옵셔널이 아닌 값은 다른 값으로 인식함
+
+옵셔널은 열거형으로 구현되어있다.
+값이 nil이면 none, 값이 있으면 some(Wrapped) case가 된다.
+
+옵셔널을 switch를 통해 none과 some을 구분해도 되지만 매번 구현하기는 귀찮다.
+따라서 다음 3가지 추출을 사용한다.
+
+1. 강제 추출
+- 옵셔널 값 뒤에 ! 사용
+```
+var myName: String? = "ysh"
+var name: String = myName!
+```
+
+2. 옵셔널 바인딩
+- if나 while 구문 등과 결합하여 로직을 분리할 수 있음
+- 옵셔널 값을 추출하여 지역 변수/상수로 사용할 수 있음
+```
+var myName: String? = "ysh"
+
+if let name = myName {
+    // nil이 아닐 경우 if 블록으로 진입
+    name 변수는 이 블록에서만 사용 가능(지역 변수/상수)
+} else {
+    // nil일 경우 else 블록으로 진입
+}
+```
+
+3. 암시적 추출 옵셔널
+- nil을 할당하고 싶으나, 로직상 nil이 런타임 오류를 일으키지 않는다고 확신할 수 있을 때 사용
+- 지양하는 문법이니 가급적이면 사용 자제
+- 옵셔널 바인딩은 똑같이 사용 가능
+```
+var myName: String! = "ysh"
+myName.isEmpty // 런타임 오류
+```
