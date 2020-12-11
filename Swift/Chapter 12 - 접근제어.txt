@@ -1,0 +1,26 @@
+Chapter 12 - 접근제어
+
+스위프트의 접근제어 수준은 open, public, internal, fileprivate, private 5단계로 나뉨
+
+1. open: 모듈 외부까지(클래스만 사용)
+2. public: 모듈 외부까지
+3. internal: 모듈 내부 -> 기본 접근수준이므로 키워드 생략해도 됨
+4. fileprivate: 파일 내부
+5. private: 기능 정의 내부
+
+- 더 높은 접근수준 안에 낮은 접근 수준을 정의할 수 없음(private안에 public 사용 불가)
+- 읽기 전용으로 구현하고싶으면 public으로 구현하고 setter만 private(set)으로 구현하면 됨
+```
+public struct SomeType {
+    private var count: Int = 0
+
+    private(set) var internalGetOnlyComputedProperty: Int {
+        get {
+            return count
+        }
+        set {
+            count += 1
+        }
+    }
+}
+```
