@@ -1,0 +1,268 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="unit_converter_title">Unit Converter</string>
+
+    <!-- 단위 계산기 탭 !-->
+    <string name="unit_area">Area</string>
+    <string name="unit_length">Length</string>
+    <string name="unit_temperature">Temperature</string>
+    <string name="unit_volume">Volume</string>
+    <string name="unit_mass">Mass</string>
+    <string name="unit_data">Data</string>
+    <string name="unit_speed">Speed</string>
+    <string name="unit_time">Time</string>
+
+    <!--Area Spinner 구성요소 !-->
+    <string name="area_acre">acre</string>
+    <string name="area_ares">Ares</string>
+    <string name="area_hectares">Hectares</string>
+    <string name="area_square_centimeters">Square centimeters</string>
+    <string name="area_square_feet">Square feet</string>
+    <string name="area_square_meters">Square meters</string>
+    <string name="area_square_inches">Square inches</string>
+
+    <!-- Length Spinner 구성요소 !-->
+    <string name="length_millimeters">Millimeters</string>
+    <string name="length_centimeters">Centimeters</string>
+    <string name="length_meters">Meters</string>
+    <string name="length_kilometers">Kilometers</string>
+    <string name="length_inches">Inches</string>
+    <string name="length_feet">Feet</string>
+    <string name="length_yards">Yards</string>
+    <string name="length_miles">Miles</string>
+    <string name="length_nautical_miles">Nautical miles</string>
+    <string name="length_mils">Mils</string>
+    <string name="length_ja">Ja</string>
+    <string name="length_le">Le</string>
+
+    <!-- Temperautre Spinner 구성요소 !-->
+    <string name="temperature_celsius">Celsius</string>
+    <string name="temperature_fahrenheit">Fahrenheit</string>
+    <string name="temperature_kelvin">Kelvin</string>
+
+    <!-- Volume Spinner 구성요소 !-->
+    <string name="volume_uk_gallons">UK gallons</string>
+    <string name="volume_us_gallons">US gallons</string>
+    <string name="volume_liters">Liters</string>
+    <string name="volume_milliliters">Milliliters</string>
+    <string name="volume_cubic_centimeters">Cubic centimeters (cc)</string>
+    <string name="volume_cubic_meters">Cubic meters</string>
+    <string name="volume_cubic_inches">Cubic inches</string>
+    <string name="volume_cubic_feet">Cubic feet</string>
+
+    <!-- Mass Spinner 구성요소 !-->
+    <string name="mass_tons">Tons</string>
+    <string name="mass_uk_tons">UK tons</string>
+    <string name="mass_us_tons">US tons</string>
+    <string name="mass_pounds">Pounds</string>
+    <string name="mass_ounces">Ounces</string>
+    <string name="mass_kilograms">Kilograms</string>
+    <string name="mass_grams">Grams</string>
+
+    <!-- Data Spinner 구성요소 !-->
+    <string name="data_bits">Bits</string>
+    <string name="data_bytes">Bytes</string>
+    <string name="data_kilobytes">Kilobytes</string>
+    <string name="data_megabytes">Megabytes</string>
+    <string name="data_gigabytes">Gigabytes</string>
+    <string name="data_terabytes">Terabytes</string>
+
+    <!-- Speed Spinner 구성요소 !-->
+    <string name="speed_meters_per_second">Meters per second</string>
+    <string name="speed_meters_per_hour">Meters per hour</string>
+    <string name="speed_kilometers_per_second">Kilometers per second</string>
+    <string name="speed_kilometers_per_hour">Kilometers per hour</string>
+    <string name="speed_inches_per_second">Inches per second</string>
+    <string name="speed_inches_per_hour">Inches per hour</string>
+    <string name="speed_feet_per_second">Feet per second</string>
+    <string name="speed_feet_per_hour">Feet per hour</string>
+    <string name="speed_miles_per_second">Miles per second</string>
+    <string name="speed_miles_per_hour">Miles per hour</string>
+    <string name="speed_knots">Knots</string>
+
+    <!-- Time Spinner 구성요소 !-->
+    <string name="time_milliseconds">Milliseconds</string>
+    <string name="time_seconds">Seconds</string>
+    <string name="time_minutes">Minutes</string>
+    <string name="time_hours">Hours</string>
+    <string name="time_days">Days</string>
+    <string name="time_weeks">Weeks</string>
+
+    <!-- 키패드 -->
+    <string name="keypad_0" translatable="false">0</string>
+    <string name="keypad_1" translatable="false">1</string>
+    <string name="keypad_2" translatable="false">2</string>
+    <string name="keypad_3" translatable="false">3</string>
+    <string name="keypad_4" translatable="false">4</string>
+    <string name="keypad_5" translatable="false">5</string>
+    <string name="keypad_6" translatable="false">6</string>
+    <string name="keypad_7" translatable="false">7</string>
+    <string name="keypad_8" translatable="false">8</string>
+    <string name="keypad_9" translatable="false">9</string>
+    <string name="keypad_clear" translatable="false">C</string>
+    <string name="keypad_bracket" translatable="false">()</string>
+    <string name="keypad_percent" translatable="false">%</string>
+    <string name="keypad_div" translatable="false">÷</string>
+    <string name="keypad_add" translatable="false">+</string>
+    <string name="keypad_sub" translatable="false">-</string>
+    <string name="keypad_mul" translatable="false">×</string>
+    <string name="keypad_equal" translatable="false">=</string>
+    <string name="keypad_sign" translatable="false">+/-</string>
+    <string name="keypad_dot" translatable="false">.</string>
+    <string name="keypad_switch" translatable="false">⇆</string>
+    <string name="keypad_rad" translatable="false">Rad</string>
+    <string name="keypad_root" translatable="false">√</string>
+    <string name="keypad_sin" translatable="false">sin</string>
+    <string name="keypad_cos" translatable="false">cos</string>
+    <string name="keypad_tan" translatable="false">tan</string>
+    <string name="keypad_ln" translatable="false">ln</string>
+    <string name="keypad_log" translatable="false">log</string>
+    <string name="keypad_inverse" translatable="false">1/x</string>
+    <string name="keypad_e_sup_x" translatable="false">e<sup><small>x</small></sup></string>
+    <string name="keypad_x_sup_2" translatable="false">x<sup><small>2</small></sup></string>
+    <string name="keypad_x_sup_y" translatable="false">x<sup><small>y</small></sup></string>
+    <string name="keypad_abs" translatable="false">|x|</string>
+    <string name="keypad_pi" translatable="false">π</string>
+    <string name="keypad_euler" translatable="false">e</string>
+    <string name="keypad_cube_root" translatable="false"><sup><small>3</small></sup>√</string>
+    <string name="keypad_inv_sin" translatable="false">sin<sup><small>-1</small></sup></string>
+    <string name="keypad_inv_cos" translatable="false">cos<sup><small>-1</small></sup></string>
+    <string name="keypad_inv_tan" translatable="false">tan<sup><small>-1</small></sup></string>
+    <string name="keypad_sinh" translatable="false">sinh</string>
+    <string name="keypad_cosh" translatable="false">cosh</string>
+    <string name="keypad_tanh" translatable="false">tanh</string>
+    <string name="keypad_inv_sinh" translatable="false">sinh<sup><small>-1</small></sup></string>
+    <string name="keypad_inv_cosh" translatable="false">cosh<sup><small>-1</small></sup></string>
+    <string name="keypad_inv_tanh" translatable="false">tanh<sup><small>-1</small></sup></string>
+    <string name="keypad_2_sup_x" translatable="false">2<sup><small>x</small></sup></string>
+    <string name="keypad_x_sup_3" translatable="false">x<sup><small>3</small></sup></string>
+    <string name="keypad_factorial" translatable="false">x!</string>
+    <string name="keypad_del" translatable="false">⌫</string>
+    <string name="keypad_up" translatable="false">↑</string>
+    <string name="keypad_down" translatable="false">↓</string>
+
+    <!-- 키패드 LongClick 팝업 -->
+    <string name="keypad_clear_hint">Clear</string>
+    <string name="keypad_bracket_hint">Brackets</string>
+    <string name="keypad_percent_hint">Percentage</string>
+    <string name="keypad_div_hint">Division</string>
+    <string name="keypad_mul_hint">Multiplication</string>
+    <string name="keypad_sub_hint">Minus</string>
+    <string name="keypad_add_hint">Plus</string>
+    <string name="keypad_equal_hint">Equal</string>
+    <string name="keypad_switch_hint">Alternative functions</string>
+    <string name="keypad_rad_hint">Radian</string>
+    <string name="keypad_root_hint">Square root</string>
+    <string name="keypad_sin_hint">Sine</string>
+    <string name="keypad_cos_hint">Cosine</string>
+    <string name="keypad_tan_hint">Tangent</string>
+    <string name="keypad_ln_hint">Natural log</string>
+    <string name="keypad_log_hint">Logarithm</string>
+    <string name="keypad_inv_hint">Inverse number</string>
+    <string name="keypad_e_sup_x_hint">e to the power of x</string>
+    <string name="keypad_x_sup_2_hint">x squared</string>
+    <string name="keypad_x_sup_y_hint">x to the power of y</string>
+    <string name="keypad_abs_hint">Absolute value</string>
+    <string name="keypad_pi_hint">Pi</string>
+    <string name="keypad_euler_hint">Euler\'s number</string>
+    <string name="keypad_cube_root_hint">Cube root</string>
+    <string name="keypad_inv_sin_hint">Inverse sine</string>
+    <string name="keypad_inv_cos_hint">Inverse cosine</string>
+    <string name="keypad_inv_tan_hint">Inverse tangent</string>
+    <string name="keypad_sinh_hint">Hyperbolic sine</string>
+    <string name="keypad_cosh_hint">Hyperbolic cosine</string>
+    <string name="keypad_tanh_hint">Hyperbolic tangent</string>
+    <string name="keypad_inv_sinh_hint">Inverse hyperbolic sine</string>
+    <string name="keypad_inv_cosh_hint">Inverse hyperbolic cosine</string>
+    <string name="keypad_inv_tanh_hint">Inverse hyperbolic tangent</string>
+    <string name="keypad_2_sup_x_hint">2 to the power of x</string>
+    <string name="keypad_x_sup_3_hint">Cube</string>
+    <string name="keypad_factorial_hint">Factorial</string>
+    <string name="keypad_up_hint">Move cursor up</string>
+    <string name="keypad_down_hint">Move cursor down</string>
+    <string name="keypad_history_hint">History</string>
+    <string name="keypad_unit_converter_hint">Unit converter</string>
+    <string name="keypad_scientific_mode_hint">Scientific mode</string>
+    <string name="keypad_normal_mode_hint">Normal mode</string>
+
+    <!--Area 단위 !-->
+    <string name="area_acre_sign" translatable="false">ac</string>
+    <string name="area_ares_sign" translatable="false">a</string>
+    <string name="area_hectares_sign" translatable="false">ha</string>
+    <string name="area_square_centimeters_sign" translatable="false">cm<sup><small>2</small></sup></string>
+    <string name="area_square_feet_sign" translatable="false">ft<sup><small>2</small></sup></string>
+    <string name="area_square_inches_sign" translatable="false">in<sup><small>2</small></sup></string>
+    <string name="area_square_meters_sign" translatable="false">m<sup><small>2</small></sup></string>
+    <string name="area_pyung_sign" translatable="false">평</string>
+
+    <!--Length 단위 !-->
+    <string name="length_millimeters_sign" translatable="false">mm</string>
+    <string name="length_centimeters_sign" translatable="false">cm</string>
+    <string name="length_meters_sign" translatable="false">m</string>
+    <string name="length_kilometers_sign" translatable="false">km</string>
+    <string name="length_inches_sign" translatable="false">in</string>
+    <string name="length_feet_sign" translatable="false">ft</string>
+    <string name="length_yards_sign" translatable="false">yd</string>
+    <string name="length_miles_sign" translatable="false">mi</string>
+    <string name="length_nautical_miles_sign" translatable="false">NM</string>
+    <string name="length_mils_sign" translatable="false">mil</string>
+    <string name="length_ja_sign" translatable="false">자</string>
+    <string name="length_li_sign" translatable="false">리</string>
+
+    <!--Temperature 단위 !-->
+    <string name="temperature_celsius_sign" translatable="false">°C</string>
+    <string name="temperature_fahrenheit_sign" translatable="false">°F</string>
+    <string name="temperature_kelvin_sign" translatable="false">K</string>
+
+    <!--Volume 단위 !-->
+    <string name="volume_uk_gallons_sign" translatable="false">gal</string>
+    <string name="volume_us_gallons_sign" translatable="false">gal</string>
+    <string name="volume_liters_sign" translatable="false">l</string>
+    <string name="volume_milliliters_sign" translatable="false">ml</string>
+    <string name="volume_cubic_centimeters_sign" translatable="false">cm<sup><small>3</small></sup></string>
+    <string name="volume_cubic_meters_sign" translatable="false">m<sup><small>3</small></sup></string>
+    <string name="volume_cubic_inches_sign" translatable="false">in<sup><small>3</small></sup></string>
+    <string name="volume_cubic_feet_sign" translatable="false">ft<sup><small>3</small></sup></string>
+    <string name="volume_mal_sign" translatable="false">말</string>
+    <string name="volume_dae_sign" translatable="false">되</string>
+
+    <!--Mass 단위 !-->
+    <string name="mass_tons_sign" translatable="false">t</string>
+    <string name="mass_uk_tons_sign" translatable="false">t</string>
+    <string name="mass_us_tons_sign" translatable="false">t</string>
+    <string name="mass_pounds_sign" translatable="false">lb</string>
+    <string name="mass_ounces_sign" translatable="false">oz</string>
+    <string name="mass_kilograms_sign" translatable="false">kg</string>
+    <string name="mass_grams_sign" translatable="false">g</string>
+    <string name="mass_gun_sign" translatable="false">근</string>
+    <string name="mass_don_sign" translatable="false">돈</string>
+
+    <!--Data 단위 !-->
+    <string name="data_bits_sign" translatable="false">bit</string>
+    <string name="data_bytes_sign" translatable="false">B</string>
+    <string name="data_kilobytes_sign" translatable="false">KB</string>
+    <string name="data_megabytes_sign" translatable="false">MB</string>
+    <string name="data_gigabytes_sign" translatable="false">GB</string>
+    <string name="data_terabytes_sign" translatable="false">TB</string>
+
+    <!--Speed 단위 !-->
+    <string name="speed_meters_per_seconds_sign" translatable="false">m/s</string>
+    <string name="speed_meters_per_hour_sign" translatable="false">m/h</string>
+    <string name="speed_kilometers_per_second_sign" translatable="false">km/s</string>
+    <string name="speed_kilometers_per_hour_sign" translatable="false">km/h</string>
+    <string name="speed_inches_per_second_sign" translatable="false">in/s</string>
+    <string name="speed_inches_per_hour_sign" translatable="false">in/h</string>
+    <string name="speed_feet_per_second_sign" translatable="false">ft/s</string>
+    <string name="speed_feet_per_hour_sign" translatable="false">ft/h</string>
+    <string name="speed_miles_per_second_sign" translatable="false">mi/s</string>
+    <string name="speed_miles_per_hour_sign" translatable="false">mi/h</string>
+    <string name="speed_knots_sign" translatable="false">kn</string>
+
+    <!--Time 단위 !-->
+    <string name="time_milliseconds_sign" translatable="false">ms</string>
+    <string name="time_seconds_sign" translatable="false">s</string>
+    <string name="time_minutes_sign" translatable="false">min</string>
+    <string name="time_hours_sign" translatable="false">h</string>
+    <string name="time_days_sign" translatable="false">d</string>
+    <string name="time_weeks_sign" translatable="false">wk</string>
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerArrayArea">
+        <item>@string/area_acre</item>
+        <item>@string/area_ares</item>
+        <item>@string/area_hectares</item>
+        <item>@string/area_square_centimeters</item>
+        <item>@string/area_square_feet</item>
+        <item>@string/area_square_inches</item>
+        <item>@string/area_square_meters</item>
+<!--        <item>@string/area_pyeong</item>-->
+    </string-array>
+    <string-array name="spinnerArrayLength">
+        <item>@string/length_millimeters</item>
+        <item>@string/length_centimeters</item>
+        <item>@string/length_meters</item>
+        <item>@string/length_kilometers</item>
+        <item>@string/length_inches</item>
+        <item>@string/length_feet</item>
+        <item>@string/length_yards</item>
+        <item>@string/length_miles</item>
+        <item>@string/length_nautical_miles</item>
+        <item>@string/length_mils</item>
+<!--        <item>@string/length_ja</item>-->
+<!--        <item>@string/length_le</item>-->
+    </string-array>
+    <string-array name="spinnerArrayTemperature">
+        <item>@string/temperature_celsius</item>
+        <item>@string/temperature_fahrenheit</item>
+        <item>@string/temperature_kelvin</item>
+    </string-array>
+    <string-array name="spinnerArrayVolume">
+        <item>@string/volume_uk_gallons</item>
+        <item>@string/volume_us_gallons</item>
+        <item>@string/volume_liters</item>
+        <item>@string/volume_milliliters</item>
+        <item>@string/volume_cubic_centimeters</item>
+        <item>@string/volume_cubic_meters</item>
+        <item>@string/volume_cubic_inches</item>
+        <item>@string/volume_cubic_feet</item>
+        <!--        <item>@string/volume_mal</item>-->
+        <!--        <item>@string/volume_dae</item>-->
+    </string-array>
+    <string-array name="spinnerArrayMass">
+        <item>@string/mass_tons</item>
+        <item>@string/mass_uk_tons</item>
+        <item>@string/mass_us_tons</item>
+        <item>@string/mass_pounds</item>
+        <item>@string/mass_ounces</item>
+        <item>@string/mass_kilograms</item>
+        <item>@string/mass_grams</item>
+        <!--        <item>@string/mass_gun</item>-->
+        <!--        <item>@string/mass_don</item>-->
+    </string-array>
+    <string-array name="spinnerArrayData">
+        <item>@string/data_bits</item>
+        <item>@string/data_bytes</item>
+        <item>@string/data_kilobytes</item>
+        <item>@string/data_megabytes</item>
+        <item>@string/data_gigabytes</item>
+        <item>@string/data_terabytes</item>
+    </string-array>
+    <string-array name="spinnerArraySpeed">
+        <item>@string/speed_meters_per_second</item>
+        <item>@string/speed_meters_per_hour</item>
+        <item>@string/speed_kilometers_per_second</item>
+        <item>@string/speed_kilometers_per_hour</item>
+        <item>@string/speed_inches_per_second</item>
+        <item>@string/speed_inches_per_hour</item>
+        <item>@string/speed_feet_per_second</item>
+        <item>@string/speed_feet_per_hour</item>
+        <item>@string/speed_miles_per_second</item>
+        <item>@string/speed_miles_per_hour</item>
+        <item>@string/speed_knots</item>
+    </string-array>
+    <string-array name="spinnerArrayTime">
+        <item>@string/time_milliseconds</item>
+        <item>@string/time_seconds</item>
+        <item>@string/time_minutes</item>
+        <item>@string/time_hours</item>
+        <item>@string/time_days</item>
+        <item>@string/time_weeks</item>
+    </string-array>
+    <string-array name="spinnerArrayAreaSign">
+        <item>@string/area_acre_sign</item>
+        <item>@string/area_ares_sign</item>
+        <item>@string/area_hectares_sign</item>
+        <item>@string/area_square_centimeters_sign</item>
+        <item>@string/area_square_feet_sign</item>
+        <item>@string/area_square_inches_sign</item>
+        <item>@string/area_square_meters_sign</item>
+<!--        <item>@string/area_pyung_sign</item>-->
+    </string-array>
+    <string-array name="spinnerArrayLengthSign">
+        <item>@string/length_millimeters_sign</item>
+        <item>@string/length_centimeters_sign</item>
+        <item>@string/length_meters_sign</item>
+        <item>@string/length_kilometers_sign</item>
+        <item>@string/length_inches_sign</item>
+        <item>@string/length_feet_sign</item>
+        <item>@string/length_yards_sign</item>
+        <item>@string/length_miles_sign</item>
+        <item>@string/length_nautical_miles_sign</item>
+        <item>@string/length_mils_sign</item>
+<!--        <item>@string/length_ja_sign</item>-->
+<!--        <item>@string/length_li_sign</item>-->
+    </string-array>
+    <string-array name="spinnerArrayTemperatureSign">
+        <item>@string/temperature_celsius_sign</item>
+        <item>@string/temperature_fahrenheit_sign</item>
+        <item>@string/temperature_kelvin_sign</item>
+    </string-array>
+    <string-array name="spinnerArrayVolumeSign">
+        <item>@string/volume_uk_gallons_sign</item>
+        <item>@string/volume_us_gallons_sign</item>
+        <item>@string/volume_liters_sign</item>
+        <item>@string/volume_milliliters_sign</item>
+        <item>@string/volume_cubic_centimeters_sign</item>
+        <item>@string/volume_cubic_meters_sign</item>
+        <item>@string/volume_cubic_inches_sign</item>
+        <item>@string/volume_cubic_feet_sign</item>
+<!--        <item>@string/volume_mal_sign</item>-->
+<!--        <item>@string/volume_dae_sign</item>-->
+    </string-array>
+    <string-array name="spinnerArrayMassSign">
+        <item>@string/mass_tons_sign</item>
+        <item>@string/mass_uk_tons_sign</item>
+        <item>@string/mass_us_tons_sign</item>
+        <item>@string/mass_pounds_sign</item>
+        <item>@string/mass_ounces_sign</item>
+        <item>@string/mass_kilograms_sign</item>
+        <item>@string/mass_grams_sign</item>
+<!--        <item>@string/mass_gun_sign</item>-->
+<!--        <item>@string/mass_don_sign</item>-->
+    </string-array>
+    <string-array name="spinnerArrayDataSign">
+        <item>@string/data_bits_sign</item>
+        <item>@string/data_bytes_sign</item>
+        <item>@string/data_kilobytes_sign</item>
+        <item>@string/data_megabytes_sign</item>
+        <item>@string/data_gigabytes_sign</item>
+        <item>@string/data_terabytes_sign</item>
+    </string-array>
+    <string-array name="spinnerArraySpeedSign">
+        <item>@string/speed_meters_per_seconds_sign</item>
+        <item>@string/speed_meters_per_hour_sign</item>
+        <item>@string/speed_kilometers_per_second_sign</item>
+        <item>@string/speed_kilometers_per_hour_sign</item>
+        <item>@string/speed_inches_per_second_sign</item>
+        <item>@string/speed_inches_per_hour_sign</item>
+        <item>@string/speed_feet_per_second_sign</item>
+        <item>@string/speed_feet_per_hour_sign</item>
+        <item>@string/speed_miles_per_second_sign</item>
+        <item>@string/speed_miles_per_hour_sign</item>
+        <item>@string/speed_knots_sign</item>
+    </string-array>
+    <string-array name="spinnerArrayTimeSign">
+        <item>@string/time_milliseconds_sign</item>
+        <item>@string/time_seconds_sign</item>
+        <item>@string/time_minutes_sign</item>
+        <item>@string/time_hours_sign</item>
+        <item>@string/time_days_sign</item>
+        <item>@string/time_weeks_sign</item>
+    </string-array>
+</resources>

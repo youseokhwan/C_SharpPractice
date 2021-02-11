@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cstLyMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    app:layout_constraintHeight_percent="0.24"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edtExpression"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Expression"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F4C5C5"
+        android:text="Result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtExpression" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cstLyMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult">
+
+        <Button
+            android:id="@+id/btnHistory"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="his"
+            android:textAllCaps="false"
+            android:tooltipText="@string/keypad_history_hint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnUnitConverter"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="conv"
+            android:textAllCaps="false"
+            android:tooltipText="@string/keypad_unit_converter_hint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnHistory"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnMode"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="mode"
+            android:textAllCaps="false"
+            android:tooltipText="@string/keypad_scientific_mode_hint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnUnitConverter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="@string/keypad_del"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TableLayout
+        android:id="@+id/tblLyMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.58"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cstLyMenu">
+
+        <TableRow
+            android:id="@+id/rowMain0"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btnMainSwitch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_switch"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_switch_hint" />
+
+            <Button
+                android:id="@+id/btnMainRad"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_rad"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_rad_hint" />
+
+            <Button
+                android:id="@+id/btnMainRoot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_root"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_root_hint" />
+
+            <Button
+                android:id="@+id/btnMainClear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_clear"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_clear_hint" />
+
+            <Button
+                android:id="@+id/btnMainBracket"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_bracket"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_bracket_hint" />
+
+            <Button
+                android:id="@+id/btnMainPercent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_percent"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_percent_hint" />
+
+            <Button
+                android:id="@+id/btnMainDiv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_div"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_div_hint" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowMain1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btnMainSin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_sin"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_sin_hint" />
+
+            <Button
+                android:id="@+id/btnMainCos"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_cos"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_cos_hint" />
+
+            <Button
+                android:id="@+id/btnMainTan"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_tan"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_tan_hint" />
+
+            <Button
+                android:id="@+id/btnMain7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_7"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnMain8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_8"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnMain9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_9"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnMainMul"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_mul"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_mul_hint" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowMain2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btnMainLn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_ln"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_ln_hint" />
+
+            <Button
+                android:id="@+id/btnMainLog"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_log"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_log_hint" />
+
+            <Button
+                android:id="@+id/btnMainInv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_inverse"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_inv_hint" />
+
+            <Button
+                android:id="@+id/btnMain4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_4"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnMain5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_5"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnMain6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_6"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnMainSub"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_sub"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_sub_hint" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowMain3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btnMainESupX"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_e_sup_x"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_e_sup_x_hint" />
+
+            <Button
+                android:id="@+id/btnMainXSup2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_x_sup_2"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_x_sup_2_hint" />
+
+            <Button
+                android:id="@+id/btnMainXSupY"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_x_sup_y"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_x_sup_y_hint" />
+
+            <Button
+                android:id="@+id/btnMain1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_1"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnMain2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_2"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnMain3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_3"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnMainAdd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_add"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_add_hint" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowMain4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btnMainAbs"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_abs"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_abs_hint" />
+
+            <Button
+                android:id="@+id/btnMainPi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_pi"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_pi_hint" />
+
+            <Button
+                android:id="@+id/btnMainEuler"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_euler"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_euler_hint" />
+
+            <Button
+                android:id="@+id/btnMainSign"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_sign"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnMain0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_0"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnMainDot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_dot"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnMainEqual"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/keypad_equal"
+                android:textAllCaps="false"
+                android:tooltipText="@string/keypad_equal_hint" />
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
